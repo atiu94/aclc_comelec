@@ -1,0 +1,39 @@
+.ui-accordion-header {
+	padding: 5px 10px 5px 26px;
+}
+#menu-accordion .ui-state-active, #menu-accordion .ui-state-default {
+	border: 0;
+	background: none;
+}
+#menu-accordion .ui-state-active.ui-state-active {
+	color: #333333;	
+}
+#menu-accordion .ui-state-active.ui-state-hover, #menu-accordion .ui-state-default.ui-state-hover, #menu-accordion .ui-state-default.ui-state-focus {
+	color: #B83400;	
+}
+#menu-accordion .ui-state-default.ui-state-hover .ui-icon, #menu-accordion .ui-state-default.ui-state-focus .ui-icon {
+	background-image: url(../images/jquery-ui/ui-icons_b83400_256x240.png);
+	
+}
+#menu-accordion .ui-accordion-content {
+	border: 0;
+	background: none;	
+	padding: 0 0 0 26px;
+}
+#menu-accordion .ui-accordion-content > ul {
+	
+}
+input.date {
+	display: none;
+}
+input.datepicker {
+	cursor: pointer;
+	border: 0;
+	padding: 0;
+	margin: 0 10px 0 0;
+	background: none;
+}
+img.ui-datepicker-trigger {
+	cursor: pointer;
+	float: left;
+}

@@ -1,0 +1,39 @@
+[ABOUT]
+Mythos
+Developed by Zeaple, Inc.
+
+
+[INSTALLATION]
+
+1. Copy the mythos folder in application/third_party
+
+2. Open application/config/config.php and make the following changes:
+	- Change the $autoload['packages'] to:
+		$autoload['packages'] = array(APPPATH.'third_party/mythos/');
+	- Add 'mythos' in the $autoload['libraries']
+
+3. Move/Copy the files found in application/third_party/mythos/core to application/core
+	- Note: Fixes some of CI's bugs when using third-party packages.
+
+4. Move/Copy the resources folder to the root folder of your CI installation. Call the CSS and Javascript files in your template.
+
+5. Move/Copy config/mythos.php to your CI application's config folder (application/config).
+
+
+[NOTES]
+
+1. If you are to add functionality to a library specific to the system you are making, just extend the original Mythos library. This allows you to upgrade your Mythos package without having any conflicts with your code.
+
+2. You may edit the Mythos files for bug fixes and enhancements. Please commit them and notify the development team regarding the bug fixe or enhancement.
+
+3. Mythos libraries use the subclass_prefix "MYTHOS_".
+
+4. You can extend all libraries except MYTHOS_Pagination and MYTHOS_Form_validation (limitation of CI: cannot extend a third-party library which extends a core CI library).
+
+5. Calling Mythos files should be done by either autoloading using the config/mythos.php or by calling the load functions of the Mythos class (do not use CI's loader).
+
+	Example:
+	$this->mythos->library('captcha'); // RIGHT
+	$this->load->library('captcha'); // WRONG
+
+6. If you copied the Mythos config file into your application's config folder, CI will ignore the original Mythos config file.

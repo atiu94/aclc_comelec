@@ -1,0 +1,40 @@
+<html>
+<head>
+	<script type="text/javascript" src="../../../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../tiny_mce_popup.js"></script>
+	<script type="text/javascript" src="js/dialog.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../../bootstrap/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="css/styles.css" />
+</head>
+<body>
+<div style="margin: 0 auto">
+	<div class="wrapper">
+		<div class="field-group">
+			<label for="page_cats">Link Type</label> 
+			<select id="link_type">
+				<option value="int">Page within the website</option>
+				<option value="ext">External website</option>
+			</select>
+		</div>
+		
+		<div id="fg_int" class="main-field-group">
+			<div class="field-group">
+				<label for="page_cats">Category</label> <select id="page_cats"></select>
+			</div>
+			<div class="field-group">
+				<label for="pages">Page</label> <select id="pages"></select>
+			</div>
+		</div>
+		<div id="fg_ext" class="main-field-group">
+			<div class="field-group">
+				<label for="page_cats">URL of Website</label> <input type="text" id="ext_url" />
+			</div>
+		</div>
+	</div>
+</div>
+<div id="navbar">
+	<a class="btn btn-primary" id="insert_link">Link</a>
+	<a class="btn" id="back_link">Back</a>
+</div>
+</body>
+</html>

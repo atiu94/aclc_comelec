@@ -1,0 +1,44 @@
+RewriteEngine On
+RewriteBase /
+
+# exclude any paths that are not codeigniter-app related
+RewriteCond %{REQUEST_URI} !^/server-status
+RewriteCond %{REQUEST_URI} !^/server-info
+RewriteCond %{REQUEST_URI} !^/docs
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# ------------------------------------------------------------------------------
+# Remove index.php
+# ------------------------------------------------------------------------------
+
+# Use this if URL is permanent (has own domain). Comment out the similar rule below.
+<IfModule mod_php5.c>
+RewriteRule ^(.*)$ index.php/$1 [L]
+</IfModule>
+
+# the following is for rewritting under FastCGI
+<IfModule !mod_php5.c>
+RewriteRule ^(.*)$ index.php?/$1 [L]
+</IfModule>
+
+# Use this if URL is temporary (http://184.154.69.106/~mywebsite/. Comment out the similar rule above.
+#<IfModule mod_php5.c>
+# RewriteRule ^(.*)$ /~mywebsite/index.php/$1 [L]
+#</IfModule>
+
+# the following is for rewritting under FastCGI
+#<IfModule !mod_php5.c>
+# RewriteRule ^(.*)$ /~mywebsite/index.php/$1 [L]
+#</IfModule>
+
+# ------------------------------------------------------------------------------
+# Files and directories accessible via HTTP request
+# ------------------------------------------------------------------------------
+# RewriteCond $1 !^(index\.php|resources|robots\.txt|favicon|uploads)
+
+# ------------------------------------------------------------------------------
+# Unknown MIME Types Fix
+# ------------------------------------------------------------------------------
+AddType application/x-font-woff .woff

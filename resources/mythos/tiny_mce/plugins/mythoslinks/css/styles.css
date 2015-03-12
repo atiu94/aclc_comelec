@@ -1,0 +1,28 @@
+body {
+	margin: 0 !important;
+}
+.wrapper {
+	margin: 0 auto;
+	width: 220px;
+	padding-top: 10px;
+}
+h1 {
+	margin-bottom: 20px !important;
+}
+#navbar {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background: #333333;
+	padding: 10px 0;
+	text-align: center;
+}
+.main-field-group {
+	display: none;
+}
+.field-group {
+	margin-bottom: 10px;
+}
+input[type="text"] {
+	height: 30px;
+}

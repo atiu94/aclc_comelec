@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /_*
+Disallow: /cgi_bin/*
+Disallow: /resources/*
+Disallow: /api
+Disallow: /api/*
+Disallow: /admin
+Disallow: /admin/*
+Disallow: /index.php/admin
+Disallow: /index.php/admin/*
