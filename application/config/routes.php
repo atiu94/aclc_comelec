@@ -39,10 +39,10 @@
 */
 
 // Set the default controller of the site.
-$route['default_controller'] = "site/page/index/home";
+$route['default_controller'] = "site/welcome/index";
 
 // Redirect all admin requests to the admin folder.
-$route['admin'] = "admin/index";
+$route['admin'] = "admin";
 $route['admin/login'] = "admin/index/index";
 $route['admin/forbidden'] = "admin/index/forbidden";
 $route['admin/(:any)'] = "admin/$1";

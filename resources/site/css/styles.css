@@ -2,6 +2,7 @@ body
 {
 	padding:0px;
 	margin:0px;
+	background-color: #eee;
 }
 .container
 {
@@ -227,7 +228,7 @@ input[type="text"]::-webkit-input-placeholder {
    color: #555555;
 }
 textarea:-moz-placeholder,
-input[type="password"]:-moz-placeholder, 
+input[type="password"]:-moz-placeholder,
 input[type="text"]:-moz-placeholder { /* Firefox 18- */
    color: #555555;
 }
@@ -240,7 +241,7 @@ input[type="text"]::-moz-placeholder {  /* Firefox 19+ */
 
 textarea:-ms-input-placeholder,
 input[type="password"]:-ms-input-placeholder,
-input[type="text"]:-ms-input-placeholder {  
+input[type="text"]:-ms-input-placeholder {
    color: #555555;
 }
 
@@ -256,7 +257,7 @@ input[type="text"]:-ms-input-placeholder {
 }
 
 #signin{
-	background:url('../images/btn_bg.png')no-repeat center center ; 
+	background:url('../images/btn_bg.png')no-repeat center center ;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -277,7 +278,7 @@ input[type="text"]:-ms-input-placeholder {
 	margin-top:20px;
 }
 
-.clear_both 
+.clear_both
 {
 	clear: both;
 }
@@ -305,7 +306,7 @@ input[type="text"]:-ms-input-placeholder {
 
 .centerAlign #signin
 {
-	font-size:12px;	
+	font-size:12px;
 }
 
 .home_forms
@@ -323,7 +324,7 @@ input[type="text"]:-ms-input-placeholder {
 {
 	margin:0 auto;
 	max-width:1000px;
-	color:#8d8d8d;	
+	color:#8d8d8d;
 	font-family: 'RobotoLight';
 }
 
@@ -335,7 +336,7 @@ input[type="text"]:-ms-input-placeholder {
 
 .foot_nav
 {
-	list-style-type:none;	
+	list-style-type:none;
 }
 .foot_nav li
 {
@@ -349,7 +350,7 @@ input[type="text"]:-ms-input-placeholder {
 {
 	background:#ffffff;
 }
-	
+
 
 #tt_name, #tt_name a{
 	color: #ff7804;
@@ -374,7 +375,7 @@ input[type="text"]:-ms-input-placeholder {
 	color:#1f6a92;
 	font-family: 'RobotoCondensed';
 }
-	
+
 @media (max-width: 1025px){
 
 	.home_boxes {
@@ -384,14 +385,14 @@ input[type="text"]:-ms-input-placeholder {
 		position: relative;
 		margin-left: 25px;
 	}
-	
-	
+
+
 	.home_hot_talent
 	{
 		width:96%;
 		margin-top:25px;
 	}
-	
+
 	.home_hot_talent .hb_title
 	{
 		float:left;
@@ -399,7 +400,7 @@ input[type="text"]:-ms-input-placeholder {
 		margin-left: 0px;
 		width: 100%;
 	}
-	
+
 	.home_hot_talent .small_talent_box img
 	{
 		width: 50px;
@@ -423,18 +424,18 @@ input[type="text"]:-ms-input-placeholder {
 	.home_title {
 		width: 405px;
 	}
-	
+
 	.header .wrapper {
 		max-width: 900px;
 		margin: 0 auto;
 		height: 50px;
 	}
-	
+
 	.header .wrapper #logo
 	{
 		margin-left:20px;
 	}
-	
+
 }
 
 @media (min-width: 640px){
@@ -443,7 +444,7 @@ input[type="text"]:-ms-input-placeholder {
 		margin-right:25px;
 		color:#fff;
 		padding:5px;
-		
+
 	}
 	.body .wrapper
 	{
@@ -457,13 +458,13 @@ input[type="text"]:-ms-input-placeholder {
 		background:#eeeeee;
 		font-size:16px;
 		color:#919191;
-		text-decoration:none;		
+		text-decoration:none;
 		font-family: 'RobotoMedium';
 		margin:0px;
 	}
 	.navList:hover
 	{
-		background:url('../images/nav_bg.png')repeat-x; 		
+		background:url('../images/nav_bg.png')repeat-x;
 		color:#fff;
 		text-decoration:none;
 	}
@@ -480,7 +481,7 @@ input[type="text"]:-ms-input-placeholder {
 		width:700px;
 		margin:50px auto 0px auto;
 	}
-	
+
 	.home_wrapper
 	{
 		width:97%;
@@ -493,10 +494,10 @@ input[type="text"]:-ms-input-placeholder {
 		float:left;
 		margin-right:1px;
 	}
-	
+
 	.home_title
 	{
-		background:url('../images/title_bg.png')no-repeat  center center; 
+		background:url('../images/title_bg.png')no-repeat  center center;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
@@ -509,39 +510,39 @@ input[type="text"]:-ms-input-placeholder {
 		line-height: 50px;
 		color:#fff;
 	}
-	
+
 	.home_wrapper {
 		width: 97%;
 	}
 
-	
-	.talentSearchForm label, 
-	.talentSearchForm select, 
-	.talentSearchForm input[type="text"], 
+
+	.talentSearchForm label,
+	.talentSearchForm select,
+	.talentSearchForm input[type="text"],
 	.talentSearchForm input[type="password"]
 	{
-		margin-left: 15px;		
+		margin-left: 15px;
 		width: 336px;
 	}
-	
+
 	.centerAlign {
 		text-align: center;
 		margin-left: 38px;
 	}
-	
+
 	.centerAlign2
 	{
 		text-align: center;
 		margin: 0px;
 		width: 100%;
 	}
-	
+
 	.signUpbnt
 	{
 		display:block;
 		margin:0 auto;
 	}
-	
+
 	.home_wrapper
 	{
 		width:100%;
@@ -550,7 +551,7 @@ input[type="text"]:-ms-input-placeholder {
 	{
 		margin-right:0px;
 	}
-	
+
 	.home_boxes {
 		width: 90%;
 		height: 50px;
@@ -562,7 +563,7 @@ input[type="text"]:-ms-input-placeholder {
 	{
 		padding:0px;
 	}
-	.bh_numbox 
+	.bh_numbox
 	{
 		right: auto;
 		left:0px;
@@ -572,7 +573,7 @@ input[type="text"]:-ms-input-placeholder {
 	{
 		height: 50px;
 		font-size:12px;
-		
+
 	}
 	.hb_title
 	{
@@ -593,47 +594,47 @@ input[type="text"]:-ms-input-placeholder {
 	{
 		float:right;
 	}
-	
+
 	.head_login_nav li
 	{
 		display:inline;
 		padding-left:50px;
 	}
-	
+
 	.head_login_nav li a
 	{
 		line-height:60px;
-		color:#ff7804;		
+		color:#ff7804;
 		font-family: 'RobotoLight';
 	}
 	.head_login_nav li a:hover
 	{
 		color:#fff;
 	}
-	
+
 	#inside_header
 	{
 		height:50px;
 		background:#eeeeee;
 	}
-	
+
 	#ih_title
 	{
 		height:50px;
 		line-height:50px;
-		color:#919191;		
+		color:#919191;
 		font-family: 'RobotoRegular';
 		padding-left:10px;
 		font-size:15px;
 	}
-	
+
 	#ih_search_box
 	{
 		height:50px;
 		line-height:50px;
 		text-align: right;
 	}
-	
+
 	#ih_search_box #talent_gender
 	{
 		width: 17.3646408839779%;
@@ -650,7 +651,7 @@ input[type="text"]:-ms-input-placeholder {
 		margin-bottom: 10px;
 		padding-bottom:3px;
 	}
-	
+
 	.inside_wrapper
 	{
 		width:100%;
@@ -668,23 +669,23 @@ input[type="text"]:-ms-input-placeholder {
 			color-stop(0.47, #FFFFFF),
 			color-stop(0.8, #F1F1F1)
 		);
-		
+
 		padding:10px 0px;
-		
+
 	}
-	
+
 	#myprofile_navigation
 	{
-		background:url('../images/navbg.png')no-repeat  center center; 
+		background:url('../images/navbg.png')no-repeat  center center;
 		webkit-background-size: 100% 100%;
 		-moz-background-size: 100% 100%;
 		-o-background-size: 100% 100%;
 		background-size: 100% 100%;
 		height:50px;
 		line-height:50px;
-		
+
 	}
-	
+
 	#myprofile_navigation .myprofile_nav
 	{
 		padding:0px;
@@ -693,23 +694,23 @@ input[type="text"]:-ms-input-placeholder {
 	#myprofile_navigation li
 	{
 		display:inline;
-		margin-right:20px;		
+		margin-right:20px;
 	}
-	
-	
+
+
 	#myprofile_navigation li a
 	{
 		font-size:17px;
 		font-family: 'RobotoLight';
 		color:#fff;
 	}
-	
+
 	#myprofile_navigation li a.active,
 	#myprofile_navigation li a:hover
 	{
 		color:#ff7804;
 	}
-	
+
 	#myaccount_main
 	{
 		margin:20px auto !important;
@@ -717,13 +718,13 @@ input[type="text"]:-ms-input-placeholder {
 		border:1px solid #cacaca;
 		padding:10px;
 	}
-	
+
 	#myphoto
 	{
 		float:left;
 		width:30%;
 		margin-top:10px;
-		margin-left:10px;		
+		margin-left:10px;
 		margin-bottom:30px;
 	}
 	#myphoto img
@@ -739,31 +740,31 @@ input[type="text"]:-ms-input-placeholder {
 		margin-right:10px;
 		margin-bottom:30px;
 	}
-	
+
 	#myvideo video
 	{
 		height:100%;
 		width:100%;
 	}
-	
+
 	#myinfo
 	{
 		margin:10px auto !important;
 		padding:10px;
 		float:none;
 	}
-	
+
 	#myinfo input[type="text"],
 	#myinfo select.span5
 	{
 		width:47%;
 	}
-	
+
 	#myinfo #floatitright
 	{
 		float:right;
 	}
-	
+
 	#myinfoSubmit
 	{
 		height:50px;
@@ -780,7 +781,7 @@ input[type="text"]:-ms-input-placeholder {
 		padding:7px 15px 4px 15px;
 		font-family: 'RobotoLight';
 	}
-	
+
 	#trending_talent
 	{
 		padding:10px;
@@ -789,20 +790,20 @@ input[type="text"]:-ms-input-placeholder {
 		background:#eeeeee;
 		border:1px solid #cfcfcf;
 	}
-	
+
 	#mytalent_img
 	{
 		display: table-cell;
 		text-align: center;
 		vertical-align: middle;
 	}
-	
+
 	#mytalent_img img
 	{
 		max-height:117px;
 		max-width:117px;
 	}
-	
+
 	#myt_link
 	{
 		margin: 0px;
@@ -822,9 +823,9 @@ input[type="text"]:-ms-input-placeholder {
 	{
 		font-family: 'RobotoBold';
 		color:#636363;
-		
+
 	}
-	
+
 	#news_list
 	{
 		padding:10px;
@@ -833,13 +834,13 @@ input[type="text"]:-ms-input-placeholder {
 		border: 1px solid #cfcfcf;
 		width:96%;
 		margin-bottom:10px;
-	}	
+	}
 }
 
 @media (max-width: 640px){
 	body
 	{
-		background:url('../images/bg.png')no-repeat; 
+		background:url('../images/bg.png')no-repeat;
 		-webkit-background-size: 100% 100%;
 		-moz-background-size: 100% 100%;
 		-o-background-size: 100% 100%;
@@ -863,8 +864,8 @@ input[type="text"]:-ms-input-placeholder {
 	}
 	.header .wrapper
 	{
-		width:100%;	
-		margin: 0 auto;		
+		width:100%;
+		margin: 0 auto;
 	}
 	.header .wrapper a
 	{
@@ -898,17 +899,17 @@ input[type="text"]:-ms-input-placeholder {
 		float:left;
 		margin-right:1px;
 	}
-	
+
 	.home_title
 	{
-		background:url('../images/title_bg.png')no-repeat  center center; 
+		background:url('../images/title_bg.png')no-repeat  center center;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
 		background-size: cover;
 		margin:0px;
 		width: 574px;
-		height:57px;	
+		height:57px;
 		font-size:25px;
 		text-align:center;
 		line-height:57px;
@@ -918,7 +919,7 @@ input[type="text"]:-ms-input-placeholder {
 	{
 		margin-left:7px;
 	}
-	
+
 	.navList
 	{
 		padding:10px 15px;
@@ -926,13 +927,13 @@ input[type="text"]:-ms-input-placeholder {
 		background:#eeeeee;
 		font-size:16px;
 		color:#919191;
-		text-decoration:none;		
+		text-decoration:none;
 		font-family: 'RobotoMedium';
 		margin:0px;
 	}
 	.navList:hover
 	{
-		background:url('../images/nav_bg.png')repeat-x; 		
+		background:url('../images/nav_bg.png')repeat-x;
 		color:#fff;
 		text-decoration:none;
 	}
@@ -941,19 +942,19 @@ input[type="text"]:-ms-input-placeholder {
 		text-align: center;
 		margin-left: 0px;
 	}
-	
+
 	#myprofile_navigation
 	{
-		background:url('../images/navbg.png')no-repeat  center center; 
+		background:url('../images/navbg.png')no-repeat  center center;
 		webkit-background-size: 100% 100%;
 		-moz-background-size: 100% 100%;
 		-o-background-size: 100% 100%;
 		background-size: 100% 100%;
 		height:40px;
 		line-height:40px;
-		
+
 	}
-	
+
 	#title_inNav
 	{
 		font-size:17px;
@@ -961,18 +962,18 @@ input[type="text"]:-ms-input-placeholder {
 		color:#ff7804;
 		text-align:Center;
 	}
-	
-	
-	
+
+
+
 	#myphoto
 	{
 		float:left;
 		width:100%;
 		height:220px;
 		margin-top:0px;
-		margin-left:0px;		
+		margin-left:0px;
 		margin-bottom:15px;
-		
+
 	}
 	#myphoto img
 	{
@@ -989,21 +990,21 @@ input[type="text"]:-ms-input-placeholder {
 		margin-right:0px;
 		margin-bottom:5px;
 	}
-	
+
 	#myvideo video
 	{
 		height:100%;
 		width:100%;
 		margin:0 autol
 	}
-	
+
 	#myinfoSubmit
 	{
 		height:50px;
 		text-align:center;
 		margin-top:20px;
 	}
-	
+
 	#myinfoSubmit #updatebtn
 	{
 		border:1px solid #2d8bb3;
@@ -1016,10 +1017,10 @@ input[type="text"]:-ms-input-placeholder {
 }
 
 @media (min-width: 640px){
-	
+
 	body
 	{
-		background:url('../images/bg.png')no-repeat; 
+		background:url('../images/bg.png')no-repeat;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
@@ -1041,7 +1042,7 @@ input[type="text"]:-ms-input-placeholder {
 		margin: 0 auto;
 		height:50px;
 	}
-	
+
 	#logo
 	{
 		margin-top:10px;
@@ -1054,23 +1055,23 @@ input[type="text"]:-ms-input-placeholder {
 		margin-top:5px;
 		width:467px;
 	}
-	
+
 	.hidefromSmaller
 	{
 		display:block;
 	}
-	
-	.showfromSmaller 
+
+	.showfromSmaller
 	{
 		display:none;
 	}
-	
+
 	.navigation
 	{
 		margin-bottom:0px;
 	}
-	
-	
+
+
 	.navList
 	{
 		padding:10px 15px;
@@ -1078,17 +1079,17 @@ input[type="text"]:-ms-input-placeholder {
 		background:#eeeeee;
 		font-size:16px;
 		color:#919191;
-		text-decoration:none;		
+		text-decoration:none;
 		font-family: 'RobotoMedium';
 		margin:0px;
 	}
 	.navList:hover
 	{
-		background:url('../images/nav_bg.png')repeat-x; 		
+		background:url('../images/nav_bg.png')repeat-x;
 		color:#fff;
 		text-decoration:none;
 	}
-	
+
 	#news_list
 	{
 		padding:10px;
@@ -1097,7 +1098,7 @@ input[type="text"]:-ms-input-placeholder {
 		border: 1px solid #cfcfcf;
 		width:96%;
 		margin-bottom:10px;
-	}	
+	}
 }
 
 @media (min-width: 480px){
@@ -1105,7 +1106,7 @@ input[type="text"]:-ms-input-placeholder {
 	{
 		margin-left:25px;
 	}
-	.navigation 
+	.navigation
 	{
 		margin-left: 0px;
 		width:100%;
@@ -1116,7 +1117,7 @@ input[type="text"]:-ms-input-placeholder {
 	{
 		padding:10px;
 	}
-	
+
 	.talentSearchForm
 	{
 		font-family: 'RobotoLight';
@@ -1124,7 +1125,7 @@ input[type="text"]:-ms-input-placeholder {
 		margin-top: 15px;
 	}
 
-	
+
 }
 
 @media (max-width: 480px){
@@ -1141,17 +1142,17 @@ input[type="text"]:-ms-input-placeholder {
 		margin: 0 auto;
 		margin-top: -20px;
 	}
-	
+
 	.home_title
 	{
-		background:url('../images/title_bg.png')no-repeat  center center; 
+		background:url('../images/title_bg.png')no-repeat  center center;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
 		background-size: cover;
 		margin:0px;
 		width: 100%;
-		height:57px;	
+		height:57px;
 		font-size:25px;
 		text-align:center;
 		line-height:57px;
@@ -1161,32 +1162,32 @@ input[type="text"]:-ms-input-placeholder {
 	{
 		margin-left:3px;
 	}
-		
-	.navigation 
+
+	.navigation
 	{
-		margin-left: 0px;		
+		margin-left: 0px;
 		background: #f5f5f5;
-		width:100%;		
+		width:100%;
 		margin-bottom:0px;
 	}
 	.navigation .brand
 	{
 		padding:10px;
 	}
-	
+
 	.navList
 	{
 		padding: 9px 11px;
 		font-size:12px;
 		font-size:13px;
 		color:#919191;
-		text-decoration:none;		
+		text-decoration:none;
 		font-family: 'RobotoMedium';
 		margin:0px;
 	}
 	.navList:hover
 	{
-		background:url('../images/nav_bg.png')repeat-x; 		
+		background:url('../images/nav_bg.png')repeat-x;
 		text-decoration:none;
 	}
 	.talentSearchForm
@@ -1194,25 +1195,25 @@ input[type="text"]:-ms-input-placeholder {
 		font-family: 'RobotoLight';
 		font-size:16px;
 	}
-	.talentSearchForm label, .talentSearchForm select 
+	.talentSearchForm label, .talentSearchForm select
 	{
 		margin-left:3px;
-		
+
 	}
-	
+
 	.centerAlign {
 		text-align: center;
 		margin-left: 0px;
 		height: 70px;
 	}
-	
+
 	.centerAlign #signin {
 		font-size: 12px;
 		display:block;
 		margin:5px auto 10px auto;
-		
+
 	}
-	
+
 	#logo
 	{
 		float:none;
@@ -1224,42 +1225,42 @@ input[type="text"]:-ms-input-placeholder {
 		margin: 0 auto;
 		text-align:center;
 	}
-	
+
 	.home_hot_talent .small_talent_box img
 	{
 		width: 77px;
 		margin-left: 5px;
 
 	}
-	
+
 	.home_hot_talent .small_talent_box:last-child
 	{
 		display:none;
 	}
-	
+
 	.header .wrapper #logo
 	{
 		margin-left:auto;
 		margin-right:auto;
 	}
-	
+
 	#inside_header
 	{
 		height: 260px;
 	text-align: center;
 		background:#eeeeee;
 	}
-	
+
 	#ih_title
 	{
 		height:30px;
 		line-height:30px;
-		color:#919191;		
+		color:#919191;
 		font-family: 'RobotoRegular';
 		padding-left:10px;
 		font-size:16px;
 	}
-	
+
 	#ih_search_box input[type="text"],
 	#ih_search_box select
 	{
@@ -1280,7 +1281,7 @@ input[type="text"]:-ms-input-placeholder {
 		margin-bottom: 10px;
 		padding-bottom:3px;
 	}
-	
+
 	#news_list
 	{
 		padding:10px;
@@ -1293,7 +1294,7 @@ input[type="text"]:-ms-input-placeholder {
 }
 
 @media (min-width: 900px){
-	
+
 	.body .wrapper
 	{
 		width:857px !important;
@@ -1312,27 +1313,27 @@ input[type="text"]:-ms-input-placeholder {
 		float:left;
 		margin-right:1px;
 	}
-	
+
 	.home_title
 	{
-		background:url('../images/title_bg.png')no-repeat  center center; 
+		background:url('../images/title_bg.png')no-repeat  center center;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
 		background-size: cover;
 		margin:0px auto;
 		width: 408px;
-		height:57px;	
+		height:57px;
 		font-size:25px;
 		text-align:center;
 		line-height:57px;
 		color:#fff;
 	}
-	
+
 }
 
 @media (min-width: 1024px){
-	.talentSearchForm label, 
+	.talentSearchForm label,
 	.talentSearchForm select,
 	.talentSearchForm input[type="text"],
 	.talentSearchForm input[type="password"]
@@ -1340,12 +1341,12 @@ input[type="text"]:-ms-input-placeholder {
 		margin-left: 15px;
 		width: 300px;
 	}
-	
+
 	.body .wrapper {
 		width: 1000px !important;
 		margin: 50px auto 0px auto;
 	}
-	
+
 	.contents {
 		width: 970px !important;
 	}
@@ -1359,8 +1360,8 @@ input[type="text"]:-ms-input-placeholder {
 	{
 		margin-left:1px !important;
 	}
-	
-	
+
+
 	.home_title {
 		background: url('../images/title_bg.png')no-repeat center center;
 		-webkit-background-size: cover;
@@ -1375,14 +1376,14 @@ input[type="text"]:-ms-input-placeholder {
 		line-height: 57px;
 		color: #fff;
 	}
-	
+
 	.talentSearchForm {
 		font-family: 'RobotoLight';
 		font-size: 16px;
 		margin-top: 15px;
 		width: 88%;
 	}
-	
+
 	.talentSearchForm select
 	{
 		width:385px;
@@ -1417,12 +1418,12 @@ input[type="text"]:-ms-input-placeholder {
 		float:none;
 		border:1px solid #cacaca;
 	}
-	
+
 	#myphoto
 	{
 		float:left;
 		margin-top:35px;
-		margin-left:40px;		
+		margin-left:40px;
 		margin-bottom:35px;
 	}
 	#myphoto img
@@ -1438,13 +1439,13 @@ input[type="text"]:-ms-input-placeholder {
 		margin-right:40px;
 		margin-bottom:35px;
 	}
-	
+
 	#myvideo video
 	{
 		height:100%;
 		width:100%;
 	}
-	
+
 	#ih_title {
 		height: 50px;
 		line-height: 50px;
@@ -1464,7 +1465,7 @@ input[type="text"]:-ms-input-placeholder {
 	.navigation ul li
 	{
 		margin-bottom:10px;
-		padding:0px;	
+		padding:0px;
 		list-style-type:none;
 		height:22px;
 	}
@@ -1492,9 +1493,9 @@ input[type="text"]:-ms-input-placeholder {
 		float: left;
 		background: #fdfdfd;
 		padding-top: 50px;
-		padding-left: 2%;	
+		padding-left: 2%;
 	}
-	
+
 	.home_boxes
 	{
 		width: 205px;
@@ -1503,13 +1504,13 @@ input[type="text"]:-ms-input-placeholder {
 		position: relative;
 		margin-left: 20px;
 	}
-	
+
 	.bh_numbox
 	{
 		position:absolute;
 		width:50px;
 		height:50px;
-		
+
 		font-family: 'RobotoLight';
 		top:0px;
 		right:0px;
@@ -1530,7 +1531,7 @@ input[type="text"]:-ms-input-placeholder {
 	{
 		background:#b52935;
 	}
-	
+
 	.hb_title {
 		margin-left: 20px;
 		font-family: 'QuestrialRegular';
@@ -1543,12 +1544,12 @@ input[type="text"]:-ms-input-placeholder {
 	{
 		padding-top:35px;
 	}
-		
-	
+
+
 	.padding50px {
 		padding-top: 50px;
 	}
-	
+
 	.home_hot_talent {
 		width: 220px;
 		margin-top: -20px;
@@ -1558,20 +1559,20 @@ input[type="text"]:-ms-input-placeholder {
 		padding-bottom: 20px;
 		margin-bottom: 20px;
 	}
-	
+
 	.home_hot_talent .hb_title
 	{
 		font-size:22px;
 		margin-left:0px;
 		width: 197px;
 	}
-	
+
 	.small_talent_box
 	{
 		float:left;
 		padding: 5px;
 	}
-	
+
 	.hb_boxtext {
 		width: 89%;
 		height: 135px;
@@ -1584,23 +1585,23 @@ input[type="text"]:-ms-input-placeholder {
 		font-size: 23px;
 		color: #9d9d9d;
 	}
-	
+
 	.home_title
 	{
 		margin:0 auto;
 	}
-	
+
 	.header .wrapper {
 		max-width: 1000px;
 		margin: 0 auto;
 		height: 50px;
 	}
-	
+
 	.header .wrapper #logo
 	{
 		margin-left:0px;
 	}
-	
+
 	.floaterLEft {
 		height: 55px;
 		line-height: 55px;
@@ -1609,7 +1610,7 @@ input[type="text"]:-ms-input-placeholder {
 		width: 230px;
 		float: left;
 	}
-	
+
 	.floterRight
 	{
 		height: 55px;
@@ -1621,7 +1622,7 @@ input[type="text"]:-ms-input-placeholder {
 	}
 	.foot_nav
 	{
-		float:right;		
+		float:right;
 	}
 	.foot_nav li
 	{
@@ -1631,9 +1632,9 @@ input[type="text"]:-ms-input-placeholder {
 	}
 	.foot_nav li a
 	{
-		color:#8d8d8d;		
+		color:#8d8d8d;
 	}
-	
+
 	.home_forms:last-child
 	{
 		float:right;
@@ -1649,7 +1650,7 @@ input[type="text"]:-ms-input-placeholder {
 	.navigation ul li
 	{
 		margin-bottom:10px;
-		padding:0px;	
+		padding:0px;
 		list-style-type:none;
 		height:22px;
 	}
@@ -1677,9 +1678,9 @@ input[type="text"]:-ms-input-placeholder {
 		float: left;
 		background: #fdfdfd;
 		padding-top: 50px;
-		padding-left: 2%;	
+		padding-left: 2%;
 	}
-	
+
 	.home_boxes
 	{
 		width: 205px;
@@ -1688,13 +1689,13 @@ input[type="text"]:-ms-input-placeholder {
 		position: relative;
 		margin-left: 20px;
 	}
-	
+
 	.bh_numbox
 	{
 		position:absolute;
 		width:50px;
 		height:50px;
-		
+
 		font-family: 'RobotoLight';
 		top:0px;
 		right:0px;
@@ -1715,7 +1716,7 @@ input[type="text"]:-ms-input-placeholder {
 	{
 		background:#b52935;
 	}
-	
+
 	.hb_title {
 		margin-left: 20px;
 		font-family: 'QuestrialRegular';
@@ -1728,12 +1729,12 @@ input[type="text"]:-ms-input-placeholder {
 	{
 		padding-top:35px;
 	}
-		
-	
+
+
 	.padding50px {
 		padding-top: 50px;
 	}
-	
+
 	.home_hot_talent {
 		width: 220px;
 		margin-top: -20px;
@@ -1743,20 +1744,20 @@ input[type="text"]:-ms-input-placeholder {
 		padding-bottom: 20px;
 		margin-bottom: 20px;
 	}
-	
+
 	.home_hot_talent .hb_title
 	{
 		font-size:22px;
 		margin-left:0px;
 		width: 197px;
 	}
-	
+
 	.small_talent_box
 	{
 		float:left;
 		padding: 5px;
 	}
-	
+
 	.hb_boxtext {
 		width: 89%;
 		height: 135px;
@@ -1769,23 +1770,23 @@ input[type="text"]:-ms-input-placeholder {
 		font-size: 23px;
 		color: #9d9d9d;
 	}
-	
+
 	.home_title
 	{
 		margin:0 auto;
 	}
-	
+
 	.header .wrapper {
 		max-width: 1000px;
 		margin: 0 auto;
 		height: 50px;
 	}
-	
+
 	.header .wrapper #logo
 	{
 		margin-left:0px;
 	}
-	
+
 	.floaterLEft {
 		height: 55px;
 		line-height: 55px;
@@ -1794,7 +1795,7 @@ input[type="text"]:-ms-input-placeholder {
 		width: 230px;
 		float: left;
 	}
-	
+
 	.floterRight
 	{
 		height: 55px;
@@ -1806,7 +1807,7 @@ input[type="text"]:-ms-input-placeholder {
 	}
 	.foot_nav
 	{
-		float:right;		
+		float:right;
 	}
 	.foot_nav li
 	{
@@ -1816,9 +1817,9 @@ input[type="text"]:-ms-input-placeholder {
 	}
 	.foot_nav li a
 	{
-		color:#8d8d8d;		
+		color:#8d8d8d;
 	}
-	
+
 	.home_forms:last-child
 	{
 		float:right;
@@ -1852,7 +1853,7 @@ input[type="text"]:-ms-input-placeholder {
 		padding-bottom: 20px;
 		margin-bottom: 20px;
 	}
-	
+
 	.floaterLEft {
 		height: 55px;
 		line-height: 55px;
@@ -1866,7 +1867,7 @@ input[type="text"]:-ms-input-placeholder {
 	{
 		background:#fff;
 	}
-	.home_title 
+	.home_title
 	{
 		background: url('../images/title_bg.png')no-repeat center center;
 		-webkit-background-size: cover;
@@ -1888,17 +1889,17 @@ input[type="text"]:-ms-input-placeholder {
 		margin: 0 auto;
 		margin-top: -20px;
 	}
-	
+
 	.talentSearchForm {
 		width: 500px;
 		margin: 10px auto;
 	}
-	
+
 	.centerAlign2 {
 		text-align: center;
 		margin-left: 0px;
 	}
-	
+
 	.home_boxes {
 		width: 90%;
 		height: 50px;
@@ -1906,17 +1907,17 @@ input[type="text"]:-ms-input-placeholder {
 		position: relative;
 		margin-left: 25px;
 	}
-	
+
 	.bh_numbox {
 		right:auto;
 		left:0px;
-		
+
 	}
-	
+
 	.hb_boxtext{
 		height: 50px;
 	}
-	.padding40 
+	.padding40
 	{
 		padding-top: 15px;
 	}
@@ -1925,18 +1926,18 @@ input[type="text"]:-ms-input-placeholder {
 		text-align: left;
 		margin-left: 70px;
 	}
-	
+
 	.home_hot_talent
 	{
 		width: 460px;
 		padding-left:20px;
 	}
-	
+
 	.home_hot_talent .small_talent_box:nth-child(2)
 	{
 		display:none;
 	}
-	
+
 	.small_talent_box
 	{
 		margin-left:20px
@@ -1945,7 +1946,7 @@ input[type="text"]:-ms-input-placeholder {
 	{
 		margin-left:20px;
 	}
-	.floaterLEft {		
+	.floaterLEft {
 		font-size: 12px;
 		margin:0px;
 		width:200px;
@@ -1960,31 +1961,31 @@ input[type="text"]:-ms-input-placeholder {
 	}
 	.foot_nav
 	{
-		float:right;		
+		float:right;
 	}
 	.foot_nav li
 	{
 		height:55px;
 		line-height: 55px;
 		margin-left:20px;
-		
+
 	}
-	
+
 	#myprofile_navigation
 	{
-		
+
 	}
-	
+
 	#myprofile_navigation .myprofile_nav
 	{
-		
+
 	}
-	
+
 	#mytalent_img {
-	
+
 		margin-right:10px;
 	}
-	
+
 	#trending_talent {
 		padding: 10px;
 		margin: 10px;
@@ -1992,12 +1993,12 @@ input[type="text"]:-ms-input-placeholder {
 		background: #eeeeee;
 		border: 1px solid #cfcfcf;
 	}
-	
-	
-}	
+
+
+}
 
 @media (max-width: 480px){
-	
+
 	.home_boxes {
 		width: 90%;
 		height: 50px;
@@ -2009,7 +2010,7 @@ input[type="text"]:-ms-input-placeholder {
 	{
 		padding:0px;
 	}
-	.bh_numbox 
+	.bh_numbox
 	{
 		right: auto;
 		left:0px;
@@ -2035,12 +2036,12 @@ input[type="text"]:-ms-input-placeholder {
 		margin-top:20px;
 		padding-left:15px;
 	}
-	
+
 	.small_talent_box
 	{
 		margin-left:0px
 	}
-	
+
 	#hbtext {
 		margin-left: 50px;
 		padding-left: 15px;
@@ -2050,20 +2051,20 @@ input[type="text"]:-ms-input-placeholder {
 		text-align:left;
 		padding-top: 0px;
 	}
-	
+
 	.talentSearchForm {
 		width: auto;
 		margin: auto;
 	}
-	
+
 	.header .wrapper #logo
 	{
 		float:none;
 		margin:0 auto;
 		display:block;
 	}
-	
-	.floaterLEft {		
+
+	.floaterLEft {
 		font-size: 14px;
 		margin:0px;
 		padding-left:0px;
@@ -2074,12 +2075,12 @@ input[type="text"]:-ms-input-placeholder {
 	{
 		margin-right: 0px;
 	}
-	.foot_nav 
+	.foot_nav
 	{
 		margin-left:0px;
 		float:left;
 	}
-	
+
 	.inside_wrapper
 	{
 		width:93.5%;
@@ -2103,16 +2104,16 @@ input[type="text"]:-ms-input-placeholder {
 		margin-top:10px;
 	}
 }
-	
+
 @media (max-width: 320px){
 	#head_signup form
 	{
 		padding-bottom:20px;
 		padding-top:10px;
 		margin: 0 auto;
-		width:166px;	
+		width:166px;
 		text-align:center;
-	}	
+	}
 	#logo
 	{
 		float:none;
@@ -2133,13 +2134,13 @@ input[type="text"]:-ms-input-placeholder {
 		padding: 10px;
 		margin: 0 auto;
 	}
-	
+
 	.showfromSmaller {
 		width: 100%;
 		margin: 0 auto;
 		height: 155px;
 	}
-	
+
 	#hbtext {
 		margin-left: 40px;
 		padding-left: 0px;
@@ -2149,7 +2150,7 @@ input[type="text"]:-ms-input-placeholder {
 		color: rgb(85, 85, 85);
 		text-align: left;
 	}
-	
+
 	.home_hot_talent .hb_title
 	{
 		width: 100%;
@@ -2162,7 +2163,7 @@ input[type="text"]:-ms-input-placeholder {
 	{
 		display:none;
 	}
-	
+
 	.bh_numbox {
 		position: absolute;
 		width: 30px;
@@ -2176,7 +2177,7 @@ input[type="text"]:-ms-input-placeholder {
 		color: #fff;
 		font-size: 20px;
 	}
-	
+
 	.hb_boxtext {
 		height: 40px;
 		font-size: 6px;
@@ -2188,7 +2189,7 @@ input[type="text"]:-ms-input-placeholder {
 		position: relative;
 		margin-left: 25px;
 	}
-	.floterRight 
+	.floterRight
 	{
 		width: 100%;
 		height:100px;
@@ -2206,13 +2207,13 @@ input[type="text"]:-ms-input-placeholder {
 		line-height: 35px;
 		margin-left: 8px;
 	}
-	
+
 	.inside_wrapper
 	{
 		width:90%;
 		padding:15px;
 	}
-	
+
 	#trending_talent {
 		padding: 10px;
 		margin: 10px;
@@ -2237,7 +2238,7 @@ input[type="text"]:-ms-input-placeholder {
 		width: 25px;
 	}
 	#hbtext {
-		margin-left: 31px;		
+		margin-left: 31px;
 		font-size: 11px;
 		font-weight: normal;
 		text-align: left;
@@ -2254,7 +2255,7 @@ input[type="text"]:-ms-input-placeholder {
 	.home_forms {
 		padding:8px;
 	}
-	
+
 	.inside_wrapper
 	{
 		width:87%;

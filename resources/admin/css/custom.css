@@ -1,0 +1,546 @@
+hr{
+  border: 1px solid #ddd;
+  margin-top: 1em;
+}
+
+
+.btn-small{
+  height: 24px;
+  padding: 3px 6px;
+
+}
+
+.form-horizontal .control-label{
+  text-align: left;
+}
+
+.form-control-small{
+  height: 27px;
+  font-size: 12px;
+  padding: 3px 6px;
+  margin-bottom: 0.5em;
+}
+
+.form-signin {
+  max-width: 500px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  margin: 0.5em;
+  width: 100%;
+}
+.form-signin input[type="password"] {
+  margin: 0.5em;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  width: 100%;
+}
+
+.jumbotron {
+  background-color: #aaa;
+  border-radius: 10px;
+  padding: 20px 50px;
+  margin-bottom: 0px;
+}
+
+.form-element label {
+    display: inline-block;
+    width: 150px;
+}
+
+.no-padding {
+  padding:0px;
+}
+
+#audit-trail-container {
+      width: 100%;
+      height:100%;
+}
+
+#specs-row {
+  position: relative;
+      max-height: 100%;
+      height:70vh;
+      overflow: scroll;
+}
+
+#barcode-button {
+  position:relative;
+  width:100%;
+}
+
+
+h5 {
+  margin: 20px;
+}
+
+.h5-no-margin {
+  margin: 5px 20px;
+}
+
+
+/*basic reset*/
+* {margin: 0; padding: 0;}
+
+
+/*form styles*/
+#msform {
+  width: 600px;
+  margin: 50px auto;
+  text-align: center;
+  position: relative;
+}
+#msform fieldset {
+  background: white;
+  border: 0 none;
+  border-radius: 3px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+
+  box-sizing: border-box;
+  width: 80%;
+  margin: 0 10%;
+
+  /*stacking fieldsets above each other*/
+  position: absolute;
+}
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+  display: none;
+}
+/*inputs*/
+#msform input, #msform textarea {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: exo, montserrat;
+  color: #2C3E50;
+  font-size: 13px;
+}
+/*buttons*/
+#msform .action-button {
+  width: 100px;
+  background: #27AE60;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 1px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+}
+#msform .action-button:hover, #msform .action-button:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+/*headings*/
+.fs-title {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #2C3E50;
+  margin-bottom: 10px;
+}
+.fs-subtitle {
+  font-weight: normal;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 20px;
+}
+/*progressbar*/
+#progressbar {
+  margin-bottom: 30px;
+  padding-left: 105px;
+  overflow: hidden;
+  /*CSS counters to number the steps*/
+  counter-reset: step;
+}
+#progressbar li {
+  list-style-type: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 9px;
+  width: 20%;
+  float: left;
+  position: relative;
+}
+#progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 20px;
+  line-height: 20px;
+  display: block;
+  font-size: 10px;
+  color: #333;
+  background: white;
+  border-radius: 3px;
+  margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: white;
+  position: absolute;
+  left: -50%;
+  top: 9px;
+  z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+  /*connector not needed before the first step*/
+  content: none;
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,  #progressbar li.active:after{
+  background: #27AE60;
+  color: white;
+}
+
+.container-fluid{
+  margin-top: 2em;
+}
+
+.container-half{
+  margin-left: 3em;
+  margin-right: 3em;
+}
+
+.container-one-side{
+  margin-left: 0em;
+  margin-right: 0em;
+}
+
+.form-controller-small{
+  height: 30px;
+  padding: 3px  6px;
+  font-size: 9px
+}
+
+.panel-personnel-content{
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0.25em
+}
+
+.panel-gray,
+.panel-gray > .panel-heading {
+  background-color: transparent;
+}
+
+.panel-personnel{
+  background-color: #f9f9f9;
+  margin-bottom: 4px;
+  padding: 0;
+  border-color: #bbb;
+}
+
+.panel-personnel > a > .panel-heading {
+  background-color: #ccc;
+  color: #797979;
+}
+
+.table-audit-trail
+ {
+  font-size: 1em;
+}
+
+
+.asset-info-panel {
+  padding:3px 7px;
+}
+
+
+
+/**TESTING BY KEN**/
+.navbar {
+  font-family: exo, arial;
+  background-color: #c0392b;
+}
+
+.dropdown-toggle {
+  color:black;
+}
+
+.dropdown-menu {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+thead {
+  background-color: #797979;
+  color: white;
+}
+
+tbody {
+  background-color: #ecf0f1;
+}
+
+.navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle {
+background-color: #ec4e3e;
+}
+
+
+
+.form-group {
+  margin-bottom:5px;
+}
+
+label {
+  margin-bottom: 2px;
+  padding-right: 10px;
+}
+
+.row-hello {
+  width: 100px;
+  margin:0px;
+}
+
+.modal-dialog {
+  margin-top: 70px;
+}
+
+.modal-header {
+  background-color: #95a5a6;
+  color: white;
+  height: 70px;
+  font-family: exo, arial;
+}
+
+.no-margin {
+  margin: 0px;
+  margin-top: 8px;
+}
+
+
+.modal-content {
+  border-radius: 0px;
+}
+
+.exo-font {
+  font-family: exo, montserrat, arial;
+}
+
+#scan-panel-body {
+  padding: .75em;
+}
+
+.controls {
+  display: inline-block;
+}
+
+.modal-footer {
+  border:0px;
+  background-color: #bdc3c7;
+  margin: 0px;
+  padding-top: 0px;
+  padding-right:30px;
+}
+
+.modal-body {
+  background-color: #bdc3c7;
+  padding: 25px 30px;
+}
+
+
+.panel .panel-success {
+  border-radius: 0px;
+}
+
+.no-border-radius {
+  border-radius: 0px;
+}
+
+#tag-personnel-id {
+  color: white;
+  font-size: 20px;
+}
+
+#tag-asset-modal-body {
+  padding-top: 15px;
+}
+
+.active {
+  /*background-color: rgba(238,73, 62, 0.5);*/
+}
+
+
+.pagination {
+  display: inline-block;
+  padding-left: 0;
+  margin: 20px 0;
+  border-radius: 4px;
+  
+}
+.pagination > ul  {
+  list-style-type: none;
+  text-align: center;
+}
+
+.pagination > ul > li {
+  display: inline;
+}
+
+
+.pagination > ul > li > a,
+.pagination > ul > li > span {
+  position: relative;
+  float: left;
+  padding: 6px 12px;
+  margin-left: -1px;
+  line-height: 1.42857143;
+  color: #428bca;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+.pagination > ul > li:first-child > a,
+.pagination > ul > li:first-child > span {
+  margin-left: 0;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.pagination > ul > li:last-child > a,
+.pagination > ul > li:last-child > span {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.pagination > ul > li > a:hover,
+.pagination > ul > li > span:hover,
+.pagination > ul > li > a:focus,
+.pagination > ul > li > span:focus {
+  color: #2a6496;
+  background-color: #eee;
+  border-color: #ddd;
+}
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  z-index: 2;
+  color: #fff;
+  cursor: default;
+  background-color: #428bca;
+  border-color: #428bca;
+}
+.pagination > .disabled > span,
+.pagination > .disabled > span:hover,
+.pagination > .disabled > span:focus,
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > a:focus {
+  color: #999;
+  cursor: not-allowed;
+  background-color: #fff;
+  border-color: #ddd;
+}
+
+
+.dashboard-panel {
+  border:5px;
+}
+
+.dashboard-row {
+  background-color: #bdc3c7;
+}
+
+.padding-fifteen {
+  padding:15px;
+}
+
+.nav-tabs>li.active>#PBI-tab, #PBI-tab:hover {
+  background-color: #2980b9;
+}
+
+.nav-tabs>li.active>#STAM-tab, #STAM-tab:hover  {
+  background-color: #e74c3c;
+}
+
+.nav-tabs>li.active>#ALL-tab, #ALL-tab:hover  {
+  background-color: #8e44ad;
+}
+
+
+
+
+/**KEN's**/
+.tab-headers {
+  color:white !important;
+  border-top: 0px !important; 
+  border-right:0px !important;
+  border-left: 0px !important;
+}
+
+.no-side-padding {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.chart-class {
+  position: relative;
+  width: inherit;
+  height: inherit;
+}
+
+.dashboard-table-row {
+  height:37px;
+}
+
+.font-eleven {
+  font-size: 11px;
+}
+
+.table-confirm-add {
+  padding-left: 10px !important;
+}
+
+
+#backup-li {
+display: block;
+padding: 3px 20px;
+clear: both;
+font-weight: normal;
+line-height: 1.42857143;
+color: #333;
+white-space: nowrap;
+background-color: transparent;
+border: none;
+outline: 0;
+width: 100%
+
+}
+
+.td-add-modal {
+  font-color:blue;
+}
+
+#backup-li:hover {
+background-color: rgba(237, 232, 232,0.5);
+outline: 0;
+}
