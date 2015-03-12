@@ -279,7 +279,7 @@ h5 {
 /**TESTING BY KEN**/
 .navbar {
   font-family: exo, arial;
-  background-color: #c0392b;
+  background-color: #2ba1bf;
 }
 
 .dropdown-toggle {
@@ -301,7 +301,7 @@ tbody {
 }
 
 .navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle {
-background-color: #ec4e3e;
+background-color: #2ba1bf;
 }
 
 
@@ -479,7 +479,7 @@ label {
 }
 
 .nav-tabs>li.active>#STAM-tab, #STAM-tab:hover  {
-  background-color: #e74c3c;
+  background-color: #2ba1bf;
 }
 
 .nav-tabs>li.active>#ALL-tab, #ALL-tab:hover  {

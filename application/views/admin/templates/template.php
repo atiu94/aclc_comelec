@@ -35,7 +35,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" style="color:white;" href="<?php echo site_url('admin/dashboard'); ?>">PBI IT Asset Inventory System</a>
+			<a class="navbar-brand" style="color:white;" href="<?php echo site_url('admin'); ?>">ACLC COMELEC Voting System</a>
 		</div>
 
 
@@ -45,39 +45,11 @@
 			<ul class="nav navbar-nav">
 
 			<?php if($this->access_control->check_logged_in()):?>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" style="color:white;" data-toggle="dropdown">Assets<span class="caret"></span></a>
-					<ul class="dropdown-menu" style="color:white;" role="menu">
-						<li><a href="<?php echo site_url('admin/hardware_assets'); ?>">Manage</a></li>
-						
-					<?php if($this->access_control->check_account_type('admin')  ):?>
-						<li><a href="<?php echo site_url('admin/hardware_assets/create'); ?>">Add</a></li>
-						<li><a id="import" href="<?php echo site_url('admin/uploads/hardware_assets'); ?>" role="button" data-toggle="modal">Import CSV</a></li>
-					<?php endif; ?>
 
-					</ul>
-				</li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" style="color:white;" data-toggle="dropdown">Employees<span class="caret"></span></a>
-					<ul class="dropdown-menu" style="color:white;" role="menu">
-						<li><a href="<?php echo site_url('admin/employees'); ?>">Manage</a></li>
-						
-					<?php if($this->access_control->check_account_type('admin')  ):?>	
-						<li><a href="<?php echo site_url('admin/employees/create'); ?>">Add</a></li>
-						<li><a href="<?php echo site_url('admin/uploads/employees'); ?>" role="button" data-toggle="modal">Import CSV</a></li>
-					<?php endif; ?>
-
-					</ul>
-				</li>
+	
 
 			<?php if($this->access_control->check_account_type('admin')):?>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" style="color:white;" data-toggle="dropdown">Accounts<span class="caret"></span></a>
-					<ul class="dropdown-menu" style="color:white;" role="menu">
-						<li><a href="<?php echo site_url('admin/accounts'); ?>">Manage</a></li>
-						<li><a href="<?php echo site_url('admin/accounts/create'); ?>">Add</a></li>
-					</ul>
-				</li>
+\
 			<?php endif; ?>
 			
 				<li class="dropdown">
@@ -96,12 +68,6 @@
 						<li><a href="<?php echo site_url('admin/index/logout'); ?>">Logout</a></li>
 					</ul>
 				</li>
-		        <li>
-		          <a id="scanbutton" class="btn btn-danger navbar-btn" href="#scanbarcode" role="button" data-toggle="modal" style="color:white; padding:5px; margin-left:25px;">Scan Barcode</a>
-		        </li>
-		        <li>
-		          <a id="findemployee" class="btn btn-danger navbar-btn" href="#findtagged" role="button" data-toggle="modal" style="color:white; padding:5px; margin-left:25px;">Find Employee</a>
-		        </li>
 
 
 
@@ -137,58 +103,13 @@
 
 <footer style="clear: both; position: relative; z-index: 10;height: 3em; margin-top: 2em;">
 	<div class="container text-center">
-	<p>&copy; 2014 | Summit Consulting Group<br>
+	<p>&copy; 2015 | ACLC Voting System<br>
 	Ateneo de Manila University</p>
 	</div>
 </footer>
 
 
 
-
-<div id = "scanbarcode" class = "modal fade">
-	<div class = "modal-dialog">
-		<div class = "modal-content">
-			<div class = "modal-header">
-				<center><h3 class="no-margin exo-font">Scan Barcode</h3></center>
-			</div>
-			<center><div class = "modal-body">
-				<div class="jumbotron">
-					<h2 class="exo-font" style="margin-top:10px;">Scan Now...</h2>
-					<form  method="post" action="<?php echo site_url("admin/hardware_assets/catch_barcode"); ?>"  name="barcode-form" id="barcode-form">
-					    <input id="barcode" class="form-control" name="barcode" type="text">
-					</form>
-				</div>
-			</div></center>
-			<div class = "modal-footer">
-				<button class = "btn btn-default btn-lg no-border-radius" data-dismiss = "modal" style="background-color: #95a5a6; outline: 0">Close</button>
-			</div>
-		</div>
-	</div>
-</div>
-
-
-<div id = "findtagged" class = "modal fade">
-	<div class = "modal-dialog">
-		<div class = "modal-content">
-			<div class = "modal-header">
-				<h3 class="no-margin exo-font">Find Employee</h3>
-			</div>
-			<center><div class = "modal-body">
-				<div class="jumbotron">
-					<h4>Find current assets tagged to a specific employee.</h4>
-					<form  method="post" action="<?php echo site_url("admin/employees/catch_employee"); ?>"  name="employee-form" id="employee-form">
-					    <input id="employee_id" class="form-control" name="employee_id" type="text">
-					
-				</div>
-			</div></center>
-			<div class = "modal-footer">
-				<input class="btn btn-success btn-lg no-border-radius" name="submit" type="submit" style="border: none; outline: 0;">
-					</form>
-				<button class = "btn btn-default btn-lg no-border-radius" data-dismiss = "modal" style="background-color: #95a5a6; outline: 0;">Close</button>
-			</div>
-		</div>
-	</div>
-</div>
 
 
 

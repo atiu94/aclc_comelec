@@ -12,7 +12,8 @@ class Index extends CI_Controller
 	{
 		if($this->access_control->check_logged_in())
 		{
-			redirect('admin/dashboard');
+			//var_dump("hello"); die();
+			redirect('admin/profile');
 		}
 	
 		$this->template->title('Login');
@@ -26,6 +27,7 @@ class Index extends CI_Controller
 		if($this->input->post('submit'))
 		{
 			$post = $this->extract->post();
+			
 			$username = $post['acc_username'];
 			$password = $post['acc_password'];
 			
@@ -48,7 +50,6 @@ class Index extends CI_Controller
 					$this->account_model->failed_login_reset($username);
 					
 					$this->session->set_userdata('acc_username', $account->acc_username);
-					$this->session->set_userdata('acc_password', $account->acc_password);
 					$this->session->set_userdata('acc_type', $account->acc_type);
 					$this->session->set_userdata('acc_first_name', $account->acc_first_name);
 					$this->session->set_userdata('acc_last_name', $account->acc_last_name);
@@ -60,7 +61,7 @@ class Index extends CI_Controller
 					}
 					else 
 					{
-						redirect('admin/dashboard');
+						redirect('admin/profile');
 					}
 				}
 				else
@@ -105,10 +106,8 @@ class Index extends CI_Controller
 		$this->template->title('Forbidden');
 		
 		$this->template->content('index-forbidden');
-
-
+			
 		$this->template->show();
-		
 	}
 	
 	public function logout()
