@@ -53,13 +53,21 @@
 					<a href="#" class="dropdown-toggle" style="color:white;"  data-toggle="dropdown">Candidates <b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li><a href="<?php echo site_url('admin/candidates'); ?>">All Candidates</a></li>
-						<li><a href="<?php echo site_url('admin/candidates/create'); ?>">Add Candidate</a></li>			
+						<li><a href="<?php echo site_url('admin/candidates/called'); ?>">Set Eligibility</a></li>	
+						<li><a href="<?php echo site_url('admin/candidates/create'); ?>">Add Candidate</a></li>	
+
 					</ul>
 				</li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" style="color:white;"  data-toggle="dropdown">Votes <b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="<?php echo site_url('admin/votes'); ?>">All Votes</a></li>
+						<li><a href="<?php echo site_url('admin/votes/create'); ?>">Cast Vote</a></li>			
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" style="color:white;"  data-toggle="dropdown">Settings<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="<?php echo site_url('admin/votes'); ?>">Set Population</a></li>
 						<li><a href="<?php echo site_url('admin/votes/create'); ?>">Cast Votes</a></li>			
 					</ul>
 				</li>

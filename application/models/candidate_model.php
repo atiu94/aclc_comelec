@@ -25,7 +25,30 @@ class Candidate_model extends Base_model
 
 	}
 
+		//get all arranged by latest har_date_added
+	public function get_all_alphabetical($params = array())
+	{
+		if(is_array($params))
+		{
+			foreach($params as $key=> $value)
+			{
+				$this->db->where($key, $value);
+			}
+		}
 
+		$this->db->order_by("can_last_name");
+		//$this->db->order_by("har_date_added","desc");
+
+		return $this->db->get($this->table);
+	}
+
+	public function delete_votes($vot_can)
+	{
+		$this->db->join('vote', "vote.vot_can = {$this->table}.can_id", "left");
+		$this->db->where('vot_can', $vot_can);			
+		$this->db->order_by("vot_can","desc");
+		$this->db->delete('vote'); // 
+	}
 
 
 

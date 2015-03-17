@@ -4,16 +4,8 @@
 		<td><?php echo $candidate->can_first_name; ?></td>
 	</tr>
 	<tr>
-		<th>Middle Name</th>
-		<td><?php echo $candidate->can_middle_name; ?></td>
-	</tr>
-	<tr>
 		<th>Last Name</th>
 		<td><?php echo $candidate->can_last_name; ?></td>
-	</tr>
-	<tr>
-		<th>Votes</th>
-		<td><?php echo number_format($candidate->can_votes); ?></td>
 	</tr>
 	<tr>
 		<th>Quota</th>

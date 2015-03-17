@@ -6,12 +6,11 @@ if($candidates->num_rows())
 		<table class="table-list table-striped table-bordered">
 			<thead>
 				<tr>
-					<th class="checkbox skip-sort"><input type="checkbox" class="select-all" value="can_ids" /></th>
+					<th>Last Name</th>		
 					<th>First Name</th>
-					
-					<th>Last Name</th>
 					<th>Votes</th>
-					<th style="width: 60px;"></th>
+					<th>Quota</th>
+					
 				</tr>
 			</thead>
 			<tbody>
@@ -20,12 +19,19 @@ if($candidates->num_rows())
 			{
 				?>
 				<tr>
-					<td class="center"><input type="checkbox" name="can_ids[]" value="<?php echo $candidate->can_id; ?>" /></td>
-					<td><a href="<?php echo site_url('admin/candidates/view/' . $candidate->can_id); ?>"><?php echo $candidate->can_first_name; ?></a></td>
-					
-					<td><?php echo $candidate->can_last_name; ?></td>
+					<td><a href="<?php echo site_url('admin/candidates/view/' . $candidate->can_id); ?>"><?php echo $candidate->can_last_name; ?></a></td>				
+					<td><?php echo $candidate->can_first_name; ?></td>
 					<td><?php echo number_format($candidate->can_votes); ?></td>
-					<td class="center"><a href="<?php echo site_url('admin/candidates/edit/' . $candidate->can_id); ?>" class="btn">Edit</a></td>
+					<td>
+						<?php if ($candidate->can_quota == true): ?>
+							<span class="label label-success">Quota</span>
+						<?php else: ?>
+							<span class="label label-default">No</span>
+						<?php endif ?>
+
+					</td>
+					
+					
 				</tr>
 				<?php
 			}
@@ -33,13 +39,6 @@ if($candidates->num_rows())
 			</tbody>
 		</table>
 		<?php echo $candidates_pagination; ?>
-		<div class="choose-select">
-			With selected:
-			<select name="form_mode" class="select-submit">
-				<option value="">choose...</option>
-				<option value="delete">Delete Candidates</option>
-			</select>
-		</div>
 	</form>
 	<?php
 }
@@ -50,3 +49,26 @@ else
 	<?php
 }
 ?>
+
+<!-- Modal -->
+<div class="modal fade" id="resetvotes" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Reset Votes</h4>
+      </div>
+      <div class="modal-body">
+       	<h5> This process involves resetting the votes to 0. Do you want to continue?</h5>
+      </div>
+      <div class="modal-footer">
+		<form  method="post" action="<?php echo site_url("admin/candidates/reset_votes"); ?>">
+		
+      	<input type="submit" value="Yes" class="btn btn-primary" />
+      	</form>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>

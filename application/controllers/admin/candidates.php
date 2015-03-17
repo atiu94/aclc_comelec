@@ -16,7 +16,7 @@ class Candidates extends CI_Controller
 	{
 		$this->template->title('Candidates');
 		$page = array();
-		$page['candidates'] = $this->candidate_model->pagination("admin/candidates/index/__PAGE__", 'get_all');
+		$page['candidates'] = $this->candidate_model->pagination("admin/candidates/index/__PAGE__", 'get_all_alphabetical');
 		$page['candidates_pagination'] = $this->candidate_model->pagination_links();
 
 		$this->set_votes($page['candidates']);
@@ -128,7 +128,7 @@ class Candidates extends CI_Controller
 
 		if($page['candidate'] === false)
 		{
-			$this->template->notification('Candidate was not found.', 'error');
+			$this->template->notification('Candidate was not found.', 'danger');
 			redirect('admin/candidates');
 		}
 
@@ -158,6 +158,7 @@ class Candidates extends CI_Controller
 	public function set_votes($candidates)
 	{
 
+
 		foreach($candidates->result() as $candidate)
 		{
 			$row_count = $this->candidate_model->count_votes($candidate->can_id);
@@ -165,4 +166,19 @@ class Candidates extends CI_Controller
 			$candidate->can_votes = $row_count;
 		}
 	}
+
+	public function reset_votes()
+	{
+		
+		$candidates = $this->candidate_model->get_all();
+
+		foreach($candidates->result() as $candidate)
+		{
+			$this->candidate_model->delete_votes($candidate->can_id);
+		}
+
+		$this->template->notification('Votes were reset to zero.', 'danger');
+		redirect('admin/candidates');
+	}
+
 }
