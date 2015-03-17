@@ -6,7 +6,7 @@ class Vote_model extends Base_model
 	{
 		// List all fields of the table.
 		// Primary key must be auto-increment and must be listed here first.
-		$fields = array('vot_id');
+		$fields = array('vot_id', 'vot_can');
 		// Call the parent constructor with the table name and fields as parameters.
 		parent::__construct('vote', $fields);
 	}

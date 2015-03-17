@@ -10,6 +10,7 @@ class Votes extends CI_Controller
 		$this->access_control->validate();
 
 		$this->load->model('vote_model');
+		$this->load->model('candidate_model');
 	}
 
 	public function index()
@@ -48,39 +49,39 @@ class Votes extends CI_Controller
 
 	public function create()
 	{
-		$this->template->title('Create Vote');
-
-
-		// Use the set_rules from the Form_validation class for form validation.
-		// Already combined with jQuery. No extra coding required for JS validation.
-		// We get both JS and PHP validation which makes it both secure and user friendly.
-		// NOTE: Set the rules before you check if $_POST is set so that the jQuery validation will work.
-
+		$this->template->title('Cast Vote');
 
 		if($this->input->post('submit'))
 		{
-			$vote = $this->extract->post();
+			$can_ids = $this->input->post('can_ids');
 
-			// Call run method from Form_validation to check
-			if($this->form_validation->run() !== false)
+		
+			if($can_ids !== false)
 			{
-				$this->vote_model->create($vote, $this->form_validation->get_fields());
-				// Set a notification using notification method from Template.
-				// It is okay to redirect after and the notification will be displayed on the redirect page.
-				$this->template->notification('New vote created.', 'success');
-				redirect('admin/votes');
-			}
-			else
-			{
-				// To display validation errors caught by the Form_validation, you should have the code below.
-				$this->template->notification(validation_errors(), 'error');
-			}
+				foreach($can_ids as $can_id)
+				{
+					$can_id_int = intval($can_id);
+
+					$vote = array();
+
+					$vote['vot_can'] = $can_id_int;
+
+					//var_dump($vote); die();
+
+					$this->vote_model->create($vote, $this->vote_model->get_fields());
+				}
+
+				$this->template->notification('Vote has been casted.', 'success');
+			}		
+				
+			
 
 			$this->template->autofill($vote);
 		}
 
 		$page = array();
-		
+		$page['candidates'] = $this->candidate_model->pagination("admin/candidates/index/__PAGE__", 'get_all');
+		$page['candidates_pagination'] = $this->candidate_model->pagination_links();
 		$this->template->content('votes-create', $page);
 		$this->template->show();
 	}

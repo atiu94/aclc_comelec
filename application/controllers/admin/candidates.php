@@ -56,10 +56,10 @@ class Candidates extends CI_Controller
 		// We get both JS and PHP validation which makes it both secure and user friendly.
 		// NOTE: Set the rules before you check if $_POST is set so that the jQuery validation will work.
 		$this->form_validation->set_rules('can_first_name', 'First Name', 'trim|required|max_length[30]');
-		$this->form_validation->set_rules('can_middle_name', 'Middle Name', 'trim|required|max_length[30]');
+		//$this->form_validation->set_rules('can_middle_name', 'Middle Name', 'trim|required|max_length[30]');
 		$this->form_validation->set_rules('can_last_name', 'Last Name', 'trim|required|max_length[30]');
-		$this->form_validation->set_rules('can_votes', 'Votes', 'trim|required|integer|max_length[11]');
-		$this->form_validation->set_rules('can_quota', 'Quota', 'trim|required|integer|max_length[1]');
+		//$this->form_validation->set_rules('can_votes', 'Votes', 'trim|required|integer|max_length[11]');
+		//$this->form_validation->set_rules('can_quota', 'Quota', 'trim|required|integer|max_length[1]');
 
 		if($this->input->post('submit'))
 		{
@@ -77,7 +77,7 @@ class Candidates extends CI_Controller
 			else
 			{
 				// To display validation errors caught by the Form_validation, you should have the code below.
-				$this->template->notification(validation_errors(), 'error');
+				$this->template->notification(validation_errors(), 'danger');
 			}
 
 			$this->template->autofill($candidate);
@@ -95,10 +95,10 @@ class Candidates extends CI_Controller
 
 
 		$this->form_validation->set_rules('can_first_name', 'First Name', 'trim|required|max_length[30]');
-		$this->form_validation->set_rules('can_middle_name', 'Middle Name', 'trim|required|max_length[30]');
+		//$this->form_validation->set_rules('can_middle_name', 'Middle Name', 'trim|required|max_length[30]');
 		$this->form_validation->set_rules('can_last_name', 'Last Name', 'trim|required|max_length[30]');
-		$this->form_validation->set_rules('can_votes', 'Votes', 'trim|required|integer|max_length[11]');
-		$this->form_validation->set_rules('can_quota', 'Quota', 'trim|required|integer|max_length[1]');
+		//$this->form_validation->set_rules('can_votes', 'Votes', 'trim|required|integer|max_length[11]');
+		//$this->form_validation->set_rules('can_quota', 'Quota', 'trim|required|integer|max_length[1]');
 
 		if($this->input->post('submit'))
 		{

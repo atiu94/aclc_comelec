@@ -49,7 +49,20 @@
 	
 
 			<?php if($this->access_control->check_account_type('admin')):?>
-\
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" style="color:white;"  data-toggle="dropdown">Candidates <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="<?php echo site_url('admin/candidates'); ?>">All Candidates</a></li>
+						<li><a href="<?php echo site_url('admin/candidates/create'); ?>">Add Candidate</a></li>			
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" style="color:white;"  data-toggle="dropdown">Votes <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="<?php echo site_url('admin/votes'); ?>">All Votes</a></li>
+						<li><a href="<?php echo site_url('admin/votes/create'); ?>">Cast Votes</a></li>			
+					</ul>
+				</li>
 			<?php endif; ?>
 			
 				<li class="dropdown">
