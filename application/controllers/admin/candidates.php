@@ -15,6 +15,13 @@ class Candidates extends CI_Controller
 	public function index()
 	{
 		$this->template->title('Candidates');
+		$page = array();
+		$page['candidates'] = $this->candidate_model->pagination("admin/candidates/index/__PAGE__", 'get_all');
+		$page['candidates_pagination'] = $this->candidate_model->pagination_links();
+
+		$this->set_votes($page['candidates']);
+
+
 
 		if($this->input->post('form_mode'))
 		{
@@ -38,9 +45,7 @@ class Candidates extends CI_Controller
 			}
 		}
 
-		$page = array();
-		$page['candidates'] = $this->candidate_model->pagination("admin/candidates/index/__PAGE__", 'get_all');
-		$page['candidates_pagination'] = $this->candidate_model->pagination_links();
+
 		$this->template->content('candidates-index', $page);
 		$this->template->content('menu-candidates', null, 'admin', 'page-nav');
 		$this->template->show();
@@ -146,5 +151,18 @@ class Candidates extends CI_Controller
 		
 		$this->template->content('candidates-view', $page);
 		$this->template->show();
+	}
+
+
+
+	public function set_votes($candidates)
+	{
+
+		foreach($candidates->result() as $candidate)
+		{
+			$row_count = $this->candidate_model->count_votes($candidate->can_id);
+
+			$candidate->can_votes = $row_count;
+		}
 	}
 }

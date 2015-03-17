@@ -14,5 +14,19 @@ class Candidate_model extends Base_model
 	// Inherits the create, update, delete, get_one, and get_all methods of base_model.
 
 
+	public function count_votes($vot_can)
+	{
+		$this->db->join('vote', "vote.vot_can = {$this->table}.can_id", "left");
+		$this->db->where('vot_can', $vot_can);			
+		$this->db->order_by("vot_can","desc");
+		$query = $this->db->get($this->table); // 
+		$rowcount = $query->num_rows();
+		return $rowcount;
+
+	}
+
+
+
+
 
 }
