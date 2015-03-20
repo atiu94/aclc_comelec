@@ -14,9 +14,48 @@ class Candidates extends CI_Controller
 
 	public function index()
 	{
-		$this->template->title('Candidates');
+		$this->template->title('All Candidates');
 		$page = array();
 		$page['candidates'] = $this->candidate_model->pagination("admin/candidates/index/__PAGE__", 'get_all_alphabetical');
+		$page['candidates_pagination'] = $this->candidate_model->pagination_links();
+
+		$this->set_votes($page['candidates']);
+
+
+
+		if($this->input->post('form_mode'))
+		{
+			$form_mode = $this->input->post('form_mode');
+
+			if($form_mode == 'delete')
+			{
+				$can_ids = $this->input->post('can_ids');
+				if($can_ids !== false)
+				{
+					foreach($can_ids as $can_id)
+					{
+						$candidate = $this->candidate_model->get_one($can_id);
+						if($candidate !== false)
+						{
+							$this->candidate_model->delete($can_id);
+						}
+					}
+					$this->template->notification('Selected candidates were deleted.', 'success');
+				}
+			}
+		}
+
+
+		$this->template->content('candidates-results', $page);
+		$this->template->content('menu-candidates', null, 'admin', 'page-nav');
+		$this->template->show();
+	}
+
+	public function results()
+	{
+		$this->template->title('Voting Results');
+		$page = array();
+		$page['candidates'] = $this->candidate_model->pagination("admin/candidates/index/__PAGE__", 'get_all_alphabetical_called');
 		$page['candidates_pagination'] = $this->candidate_model->pagination_links();
 
 		$this->set_votes($page['candidates']);
@@ -49,6 +88,68 @@ class Candidates extends CI_Controller
 		$this->template->content('candidates-index', $page);
 		$this->template->content('menu-candidates', null, 'admin', 'page-nav');
 		$this->template->show();
+	}
+
+	public function called()
+	{
+		$this->template->title('Candidates');
+		$page = array();
+		$page['candidates'] = $this->candidate_model->pagination("admin/candidates/index/__PAGE__", 'get_all_alphabetical');
+		$page['candidates_pagination'] = $this->candidate_model->pagination_links();
+
+		if($this->input->post('submit'))
+		{
+			$all_can_ids = $this->candidate_model->get_all_ids();
+	
+
+
+			$can_ids = $this->input->post('can_ids');
+
+		
+			if($can_ids !== false)
+			{
+				// foreach($can_ids as $can_id)
+				// {
+
+				// 	$candidate['can_id'] = $can_id;
+				// 	$candidate['can_called'] = true;
+				// 	$rows_affected = $this->candidate_model->update($candidate, $this->candidate_model->get_fields());
+				// }
+
+
+				foreach ($all_can_ids->result_array() as $all_can_id) {
+					
+					$can_id = $all_can_id['can_id'];
+
+					$candidate['can_id'] = $can_id;
+
+					//var_dump($can_id); die();
+
+
+					if (in_array($can_id, $can_ids)) {				
+						$candidate['can_called'] = true;
+					} else {
+						$candidate['can_called'] = false;					
+					}
+
+					$rows_affected = $this->candidate_model->update($candidate, $this->candidate_model->get_fields());   
+
+				}
+
+
+				$this->template->notification('Eligibility is set successfully. Voting can start now.', 'success');
+			}		
+				
+		}
+
+
+
+
+
+
+		$this->template->content('candidates-called', $page);
+		$this->template->content('menu-candidates', null, 'admin', 'page-nav');
+		$this->template->show();		
 	}
 
 	public function create()
@@ -166,6 +267,8 @@ class Candidates extends CI_Controller
 			$candidate->can_votes = $row_count;
 		}
 	}
+
+
 
 	public function reset_votes()
 	{

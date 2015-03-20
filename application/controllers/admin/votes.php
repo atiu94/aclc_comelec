@@ -66,8 +66,6 @@ class Votes extends CI_Controller
 
 					$vote['vot_can'] = $can_id_int;
 
-					//var_dump($vote); die();
-
 					$this->vote_model->create($vote, $this->vote_model->get_fields());
 				}
 
@@ -80,7 +78,7 @@ class Votes extends CI_Controller
 		}
 
 		$page = array();
-		$page['candidates'] = $this->candidate_model->pagination("admin/candidates/index/__PAGE__", 'get_all');
+		$page['candidates'] = $this->candidate_model->pagination("admin/candidates/index/__PAGE__", 'get_all_alphabetical_called');
 		$page['candidates_pagination'] = $this->candidate_model->pagination_links();
 		$this->template->content('votes-create', $page);
 		$this->template->show();

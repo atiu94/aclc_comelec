@@ -9,7 +9,8 @@ if($candidates->num_rows())
 					<th>Last Name</th>		
 					<th>First Name</th>
 					<th>Votes</th>
-					<th>Quota</th>
+					<th>Outcome</th>
+		
 					
 				</tr>
 			</thead>
@@ -23,14 +24,14 @@ if($candidates->num_rows())
 					<td><?php echo $candidate->can_first_name; ?></td>
 					<td><?php echo number_format($candidate->can_votes); ?></td>
 					<td>
-						<?php if ($candidate->can_quota == true): ?>
-							<span class="label label-success">Quota</span>
+						<?php if (($candidate->can_quota == true) && ($candidate->can_called == true)): ?>
+							<span class="label label-success">Win</span>
 						<?php else: ?>
-							<span class="label label-default">No</span>
+							<span class="label label-default">Lose</span>
 						<?php endif ?>
 
 					</td>
-					
+				
 					
 				</tr>
 				<?php

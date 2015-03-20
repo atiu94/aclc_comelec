@@ -52,8 +52,9 @@
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" style="color:white;"  data-toggle="dropdown">Candidates <b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="<?php echo site_url('admin/candidates'); ?>">All Candidates</a></li>
-						<li><a href="<?php echo site_url('admin/candidates/called'); ?>">Set Eligibility</a></li>	
+						<li><a href="<?php echo site_url('admin/candidates/results'); ?>">Voting Results</a></li>
+						<li><a href="<?php echo site_url('admin/candidates/called'); ?>">Set Eligibility</a></li>
+						<li><a href="<?php echo site_url('admin/candidates'); ?>">Candidate List</a></li>	
 						<li><a href="<?php echo site_url('admin/candidates/create'); ?>">Add Candidate</a></li>	
 
 					</ul>
