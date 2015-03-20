@@ -10,6 +10,7 @@ class Candidates extends CI_Controller
 		$this->access_control->validate();
 
 		$this->load->model('candidate_model');
+		$this->load->model('settings_model');
 	}
 
 	public function index()
@@ -20,7 +21,7 @@ class Candidates extends CI_Controller
 		$page['candidates_pagination'] = $this->candidate_model->pagination_links();
 
 		$this->set_votes($page['candidates']);
-
+		$this->determine_quota($page['candidates']);
 
 
 		if($this->input->post('form_mode'))
@@ -59,6 +60,9 @@ class Candidates extends CI_Controller
 		$page['candidates_pagination'] = $this->candidate_model->pagination_links();
 
 		$this->set_votes($page['candidates']);
+
+		$this->determine_quota($page['candidates']);
+
 
 
 
@@ -282,6 +286,32 @@ class Candidates extends CI_Controller
 
 		$this->template->notification('Votes were reset to zero.', 'danger');
 		redirect('admin/candidates');
+	}
+
+
+	public function determine_quota($candidates)
+	{
+		$voter_count= intval($this->settings_model->get_one(1)->set_count);
+		$temp = (2/3)*$voter_count;
+		$quota = ceil($temp);
+
+		foreach($candidates->result() as $candidate)
+		{
+			$row_count = $this->candidate_model->count_votes($candidate->can_id);
+			
+			if($row_count >= $quota)
+			{
+				$candidate->can_quota = true;
+			}
+			else
+			{
+				$candidate->can_quota = false;
+			}
+
+
+			
+			//$candidate->can_votes = $row_count;
+		}		
 	}
 
 }

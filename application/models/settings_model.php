@@ -11,6 +11,14 @@ class Settings_model extends Base_model
 		parent::__construct('settings', $fields);
 	}
 
+	public function get_popn()
+	{
+		$this->db->select('set_count');
+		$this->db->where('set_id', 1);
+		$query = $this->db->get($this->table);
+		return $query->row();
+	}
+
 	
 
 }

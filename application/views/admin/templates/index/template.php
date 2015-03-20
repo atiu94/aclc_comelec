@@ -7,6 +7,8 @@
 	<?php echo template('mythos'); ?>
 	<?php echo template('bootstrap'); ?>
 	<?php echo template('head'); ?>
+	<link rel="shortcut icon" href="<?php echo res_url('admin/images/favicon.ico'); ?>">
+
 </head>
 <body class="<?php echo uri_css_class(); ?>">
 <div class="navbar navbar-fixed-top">

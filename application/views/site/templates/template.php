@@ -9,6 +9,8 @@
 	<?php echo template('head'); ?>
 	<link rel="stylesheet" type="text/css" href="<?php echo res_url('admin/css/styles.css'); ?>" />
 	<link rel="stylesheet" type="text/css" href="<?php echo res_url('admin/css/custom.css'); ?>" />
+	<link rel="shortcut icon" href="<?php echo res_url('admin/images/black_heart.ico'); ?>">
+
 </head>
 
 <body class="<?php echo uri_css_class(); ?>">

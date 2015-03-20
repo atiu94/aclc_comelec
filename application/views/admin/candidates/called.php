@@ -3,8 +3,8 @@ if($candidates->num_rows())
 {
 	?>
 
-<div class="alert alert-info">Select the candidates who are <span class="label label-info">called</span> This system assumes that unselected candidates are not called. 
-</div>
+<h5>Select the candidates who are <span class="label label-info">called</span> This system assumes that unselected candidates are not called. 
+</h5>
 <form method="post">
 
 	<table class="table-list table-striped table-bordered">

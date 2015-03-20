@@ -2,6 +2,7 @@
 if($candidates->num_rows())
 {
 	?>
+<h5>All called candidates of the current round.</h5>
 	<form method="post">
 		<table class="table-list table-striped table-bordered">
 			<thead>
@@ -10,7 +11,7 @@ if($candidates->num_rows())
 					<th>First Name</th>
 					<th>Votes</th>
 					<th>Quota</th>
-					<th>Called</th>
+					
 					
 				</tr>
 			</thead>
@@ -32,14 +33,7 @@ if($candidates->num_rows())
 
 					</td>
 
-					<td>
-						<?php if ($candidate->can_called == true): ?>
-							<span class="label label-success">Called</span>
-						<?php else: ?>
-							<span class="label label-default">Not Called</span>
-						<?php endif ?>
-
-					</td>					
+				
 					
 				</tr>
 				<?php
@@ -54,7 +48,7 @@ if($candidates->num_rows())
 else
 {
 	?>
-	No candidates found.
+	No Called Candidates
 	<?php
 }
 ?>

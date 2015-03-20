@@ -20,7 +20,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo res_url('mythos/css/jquery-ui-extended.css'); ?>" />
 
 
-	<link rel="shortcut icon" href="<?php echo res_url('admin/images/Motolite.ico'); ?>">
+	<link rel="shortcut icon" href="<?php echo res_url('admin/images/favicon.ico'); ?>">
 </head>
 
 

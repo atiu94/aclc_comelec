@@ -84,4 +84,5 @@ class Candidate_model extends Base_model
 
 
 
+
 }

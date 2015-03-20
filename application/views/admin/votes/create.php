@@ -46,7 +46,7 @@ else
 
 <script type="text/javascript">
 
-var limit = 1;
+var limit = 2;
 $('input[type=checkbox]').on('change', function (e) {
     if ($('input[type=checkbox]:checked').length > limit) {
         $(this).prop('checked', false);
