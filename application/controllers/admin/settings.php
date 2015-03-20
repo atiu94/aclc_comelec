@@ -7,8 +7,9 @@ class Settings extends CI_Controller
 	{
 		parent::__construct();
 		
-		$this->access_control->account_type('dev');
+		$this->access_control->account_type('admin');
 		$this->access_control->validate();
+		$this->load->model('settings_model');
 	}
 	
 	public function index() 
@@ -20,6 +21,46 @@ class Settings extends CI_Controller
 		$this->template->title('Settings Summary');
 		$this->template->content('settings-index', $params);
 		$this->template->content('menu-settings', null, 'admin', 'page-nav');
+		$this->template->show();
+	}
+
+
+	public function votes(){
+
+		$params = array();
+		$params['models'] = $this->db->list_tables();
+
+		$this->form_validation->set_rules('set_count', 'Set Count', 'trim|required|integer|max_length[3]');
+
+		if($this->input->post('submit'))
+		{
+			$settings = $this->extract->post();
+			$settings['set_id'] = 1;
+
+			// Call run method from Form_validation to check
+			if($this->form_validation->run() !== false)
+			{
+				$this->settings_model->update($settings, $this->form_validation->get_fields());
+				// Set a notification using notification method from Template.
+				// It is okay to redirect after and the notification will be displayed on the redirect page.
+				$this->template->notification('Number of voters has been set.', 'success');
+				redirect('admin/candidates');
+			}
+			else
+			{
+				// To display validation errors caught by the Form_validation, you should have the code below.
+				$this->template->notification(validation_errors(), 'danger');
+			}
+
+			$this->template->autofill($setting);
+
+
+
+
+		}
+
+		$this->template->title('Vote Settings');
+		$this->template->content('settings-votes');
 		$this->template->show();
 	}
 	

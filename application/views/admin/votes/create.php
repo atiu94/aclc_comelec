@@ -28,7 +28,7 @@ if($candidates->num_rows())
 		</tbody>
 	</table>
 
-
+	<br>
 	<input type="submit" name="submit" value="Submit" class="btn btn-primary" />
 	<a href="<?php echo site_url('admin/votes'); ?>" class="btn">Back</a>
 </form>

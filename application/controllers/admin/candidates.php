@@ -46,7 +46,7 @@ class Candidates extends CI_Controller
 		}
 
 
-		$this->template->content('candidates-results', $page);
+		$this->template->content('candidates-index', $page);
 		$this->template->content('menu-candidates', null, 'admin', 'page-nav');
 		$this->template->show();
 	}
@@ -85,7 +85,7 @@ class Candidates extends CI_Controller
 		}
 
 
-		$this->template->content('candidates-index', $page);
+		$this->template->content('candidates-results', $page);
 		$this->template->content('menu-candidates', null, 'admin', 'page-nav');
 		$this->template->show();
 	}

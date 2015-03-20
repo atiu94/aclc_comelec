@@ -23,7 +23,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" style="color:white;" href="<?php echo site_url('admin/dashboard'); ?>">ACLC COMELEC Voting System</a>
+			<a class="navbar-brand" style="color:white;" href="<?php echo site_url('admin/candidates'); ?>">ACLC COMELEC Voting System</a>
 		</div>
 
 

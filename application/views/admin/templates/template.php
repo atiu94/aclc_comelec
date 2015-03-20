@@ -35,7 +35,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" style="color:white;" href="<?php echo site_url('admin'); ?>">ACLC COMELEC Voting System</a>
+			<a class="navbar-brand" style="color:white;" href="<?php echo site_url('admin/candidates'); ?>">ACLC COMELEC Voting System</a>
 		</div>
 
 
@@ -68,7 +68,7 @@
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" style="color:white;"  data-toggle="dropdown">Settings<b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="<?php echo site_url('admin/votes'); ?>">Set Population</a></li>
+						<li><a href="<?php echo site_url('admin/settings/votes'); ?>">Set Population</a></li>
 						<li><a href="<?php echo site_url('admin/votes/create'); ?>">Cast Votes</a></li>			
 					</ul>
 				</li>
@@ -78,14 +78,6 @@
 					<a href="#" class="dropdown-toggle" style="color:white;"  data-toggle="dropdown"><?php echo $this->session->userdata('acc_name'); ?><b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li><a href="<?php echo site_url('admin/profile'); ?>">Profile</a></li>
-
-				<?php if($this->access_control->check_account_type('admin')  ):?>	
-					<form  method="post" action="<?php echo site_url("admin/hardware_assets/backup"); ?>" name="backup" id="backup">	
-						<li><input type="submit" value="Backup Database" id="backup-li" style="margin-left:-5px;"></li>					
-					</form>	
-				<?php endif; ?>
-
-
 						<li class="divider"></li>
 						<li><a href="<?php echo site_url('admin/index/logout'); ?>">Logout</a></li>
 					</ul>
