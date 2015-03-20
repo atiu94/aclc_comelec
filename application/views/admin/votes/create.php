@@ -43,3 +43,14 @@ else
 	<?php
 }
 ?>
+
+<script type="text/javascript">
+
+var limit = 1;
+$('input[type=checkbox]').on('change', function (e) {
+    if ($('input[type=checkbox]:checked').length > limit) {
+        $(this).prop('checked', false);
+        alert("You are only allowed to vote for "+limit+" candidates.");
+    }
+});
+</script>
