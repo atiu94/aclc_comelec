@@ -19,7 +19,7 @@
 ![System Screenshot](/fig/voting_results.png)  
 5. Reset Votes for Next Round. 
 ![System Screenshot](/fig/reset_votes.png)  
-6. Reset Vote Limit in `views/admin/votes/create` line 60
+6. Reset Vote Limit in `views/admin/votes/create.php` line 60
 
 ```javascript
 var limit = 2; //reset vote limit here

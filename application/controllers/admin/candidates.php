@@ -98,7 +98,7 @@ class Candidates extends CI_Controller
 	{
 		$this->template->title('Set Eligibility');
 		$page = array();
-		$page['candidates'] = $this->candidate_model->pagination("admin/candidates/index/__PAGE__", 'get_all_alphabetical');
+		$page['candidates'] = $this->candidate_model->pagination("admin/candidates/index/__PAGE__", 'get_all_alphabetical_lose');
 		$page['candidates_pagination'] = $this->candidate_model->pagination_links();
 
 		if($this->input->post('submit'))
@@ -269,6 +269,8 @@ class Candidates extends CI_Controller
 			$row_count = $this->candidate_model->count_votes($candidate->can_id);
 
 			$candidate->can_votes = $row_count;
+			//$candidate['can_votes'] = $row_count;
+			//$this->candidate_model->update($candidate, $this->candidate_model->get_fields());
 		}
 	}
 
@@ -299,14 +301,34 @@ class Candidates extends CI_Controller
 		{
 			$row_count = $this->candidate_model->count_votes($candidate->can_id);
 			
-			if($row_count >= $quota)
+			if ($candidate->can_win == false) 
 			{
-				$candidate->can_quota = true;
+				if($row_count >= $quota)
+				{
+
+					$candidate->can_quota = true;
+					$candidate->can_win = true;
+					$can['can_id'] = $candidate->can_id;
+					$can['can_quota'] = true;
+					$can['can_win'] = true;
+
+
+					//$candidate['can_quota'] = true;
+					//$candidate['can_win'] = true;
+					$this->candidate_model->update($can, $this->candidate_model->get_fields());
+
+				}
+				else
+				{
+					$candidate->can_quota = false;
+					$candidate->can_win = false;
+					$can['can_id'] = $candidate->can_id;
+					$can['can_quota'] = false;
+					$can['can_win'] = false;
+					$this->candidate_model->update($can, $this->candidate_model->get_fields());
+				}
 			}
-			else
-			{
-				$candidate->can_quota = false;
-			}
+
 
 
 			

@@ -6,7 +6,7 @@ class Candidate_model extends Base_model
 	{
 		// List all fields of the table.
 		// Primary key must be auto-increment and must be listed here first.
-		$fields = array('can_id', 'can_first_name', 'can_last_name', 'can_votes', 'can_quota', 'can_called');
+		$fields = array('can_id', 'can_first_name', 'can_last_name', 'can_votes', 'can_quota', 'can_called', 'can_win');
 		// Call the parent constructor with the table name and fields as parameters.
 		parent::__construct('candidate', $fields);
 	}
@@ -42,6 +42,22 @@ class Candidate_model extends Base_model
 		return $this->db->get($this->table);
 	}
 
+	public function get_all_alphabetical_lose($params = array())
+	{
+		if(is_array($params))
+		{
+			foreach($params as $key=> $value)
+			{
+				$this->db->where($key, $value);
+			}
+		}
+
+		$this->db->where('can_win', false);	
+		$this->db->order_by("can_last_name");
+		//$this->db->order_by("har_date_added","desc");
+
+		return $this->db->get($this->table);
+	}
 
 	public function get_all_alphabetical_called($params = array())
 	{
