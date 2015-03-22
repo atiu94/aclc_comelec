@@ -22,7 +22,7 @@
 6. Reset Vote Limit in `views/admin/votes/create` line 60
 
 ```javascript
-var limit = 2;
+var limit = 2; //reset vote limit here
 $('input[type=checkbox]').on('change', function (e) {
     if ($('input[type=checkbox]:checked').length > limit) {
         $(this).prop('checked', false);
