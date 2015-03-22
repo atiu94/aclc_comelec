@@ -1,3 +1,15 @@
+<script type="text/javascript">
+//HARDCODED VOTE LIMIT
+
+var limit = 2;
+$('input[type=checkbox]').on('change', function (e) {
+    if ($('input[type=checkbox]:checked').length > limit) {
+        $(this).prop('checked', false);
+        alert("You are only allowed to vote for "+limit+" candidates.");
+    }
+});
+</script>
+
 <?php
 if($candidates->num_rows())
 {
@@ -44,7 +56,9 @@ else
 }
 ?>
 
+
 <script type="text/javascript">
+//HARDCODED VOTE LIMIT
 
 var limit = 2;
 $('input[type=checkbox]').on('change', function (e) {

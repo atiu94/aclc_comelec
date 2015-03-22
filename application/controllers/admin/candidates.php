@@ -96,7 +96,7 @@ class Candidates extends CI_Controller
 
 	public function called()
 	{
-		$this->template->title('Candidates');
+		$this->template->title('Set Eligibility');
 		$page = array();
 		$page['candidates'] = $this->candidate_model->pagination("admin/candidates/index/__PAGE__", 'get_all_alphabetical');
 		$page['candidates_pagination'] = $this->candidate_model->pagination_links();

@@ -69,7 +69,7 @@ class Votes extends CI_Controller
 					$this->vote_model->create($vote, $this->vote_model->get_fields());
 				}
 
-				$this->template->notification('Vote has been casted.', 'success');
+				$this->template->notification('Thank you for voting! Your vote is valid and has been casted.', 'success');
 			}		
 				
 			
