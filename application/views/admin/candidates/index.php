@@ -6,8 +6,7 @@ if($candidates->num_rows())
 		<table class="table-list table-striped table-bordered">
 			<thead>
 				<tr>
-					<th>Last Name</th>		
-					<th>First Name</th>
+					<th>Name</th>		
 					<th>Votes</th>
 					<th>Outcome</th>
 		
@@ -20,8 +19,8 @@ if($candidates->num_rows())
 			{
 				?>
 				<tr>
-					<td><a href="<?php echo site_url('admin/candidates/view/' . $candidate->can_id); ?>"><?php echo $candidate->can_last_name; ?></a></td>				
-					<td><?php echo $candidate->can_first_name; ?></td>
+					<td><a href="<?php echo site_url('admin/candidates/view/' . $candidate->can_id); ?>"><?php echo $candidate->can_first_name; ?> <?php echo $candidate->can_last_name; ?></a></td>				
+				
 					<td><?php echo number_format($candidate->can_votes); ?></td>
 					<td>
 						<?php //if (($candidate->can_quota == true) && ($candidate->can_called == true)):

@@ -22,9 +22,7 @@
 <script type="text/javascript">
 $(function() {		
 	$('form').floodling('can_first_name', "<?php echo addslashes($candidate->can_first_name); ?>");		
-	$('form').floodling('can_middle_name', "<?php echo addslashes($candidate->can_middle_name); ?>");		
+
 	$('form').floodling('can_last_name', "<?php echo addslashes($candidate->can_last_name); ?>");		
-	$('form').floodling('can_votes', "<?php echo addslashes($candidate->can_votes); ?>");		
-	$('form').floodling('can_quota', "<?php echo addslashes($candidate->can_quota); ?>");
 });
 </script>

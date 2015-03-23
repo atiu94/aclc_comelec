@@ -182,7 +182,7 @@ class Candidates extends CI_Controller
 				// Set a notification using notification method from Template.
 				// It is okay to redirect after and the notification will be displayed on the redirect page.
 				$this->template->notification('New candidate created.', 'success');
-				redirect('admin/candidates');
+				redirect('admin/candidates/create');
 			}
 			else
 			{
@@ -269,8 +269,11 @@ class Candidates extends CI_Controller
 			$row_count = $this->candidate_model->count_votes($candidate->can_id);
 
 			$candidate->can_votes = $row_count;
+			$can = array();
+			$can['can_id'] = $candidate->can_id;
+			$can['can_votes'] = $row_count;
 			//$candidate['can_votes'] = $row_count;
-			//$this->candidate_model->update($candidate, $this->candidate_model->get_fields());
+			$this->candidate_model->update($can, $this->candidate_model->get_fields());
 		}
 	}
 
@@ -322,10 +325,10 @@ class Candidates extends CI_Controller
 				{
 					$candidate->can_quota = false;
 					$candidate->can_win = false;
-					$can['can_id'] = $candidate->can_id;
-					$can['can_quota'] = false;
-					$can['can_win'] = false;
-					$this->candidate_model->update($can, $this->candidate_model->get_fields());
+					//$can['can_id'] = $candidate->can_id;
+					//$can['can_quota'] = false;
+					//$can['can_win'] = false;
+					//$this->candidate_model->update($can, $this->candidate_model->get_fields());
 				}
 			}
 
