@@ -2,7 +2,7 @@
 if($candidates->num_rows())
 {
 	?>
-<h5>All called candidates of the current round.</h5>
+<h5>All <?php echo $candidate_count ?> called candidates of the current round.</h5>
 	<form method="post">
 		<table class="table-list table-striped table-bordered">
 			<thead>

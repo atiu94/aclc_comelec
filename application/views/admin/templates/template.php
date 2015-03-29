@@ -65,13 +65,10 @@
 						<li><a href="<?php echo site_url('admin/votes/create'); ?>">Cast Vote</a></li>			
 					</ul>
 				</li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" style="color:white;"  data-toggle="dropdown">Settings<b class="caret"></b></a>
-					<ul class="dropdown-menu">
-					<li><a href="<?php echo site_url('admin/settings/votes'); ?>">Set Population</a></li>
-						<li><a href="<?php echo site_url('admin/votes/create'); ?>">Cast Votes</a></li>			
-					</ul>
-				</li>
+
+				<li><a style="color:white;" href="<?php echo site_url('admin/settings/votes'); ?>">Settings</a></li>
+							
+			
 			<?php endif; ?>
 			
 				<li class="dropdown">

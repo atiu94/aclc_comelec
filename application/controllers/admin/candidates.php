@@ -15,11 +15,13 @@ class Candidates extends CI_Controller
 
 	public function index()
 	{
-		$this->template->title('All Candidates');
+		
 		$page = array();
 		$page['candidates'] = $this->candidate_model->pagination("admin/candidates/index/__PAGE__", 'get_all_alphabetical');
 		$page['candidates_pagination'] = $this->candidate_model->pagination_links();
+		$candidate_count = $this->candidate_model->pagination("admin/candidates/index/__PAGE__", 'get_all_alphabetical')->num_rows();
 
+		$this->template->title('All '.$candidate_count.' Candidates');
 		$this->set_votes($page['candidates']);
 		$this->determine_quota($page['candidates']);
 
@@ -54,11 +56,13 @@ class Candidates extends CI_Controller
 
 	public function results()
 	{
-		$this->template->title('Voting Results');
+		
 		$page = array();
 		$page['candidates'] = $this->candidate_model->pagination("admin/candidates/index/__PAGE__", 'get_all_alphabetical_called');
 		$page['candidates_pagination'] = $this->candidate_model->pagination_links();
+		$page['candidate_count'] = $this->candidate_model->pagination("admin/candidates/index/__PAGE__", 'get_all_alphabetical_called')->num_rows();
 
+		$this->template->title('Voting Results');
 		$this->set_votes($page['candidates']);
 
 		$this->determine_quota($page['candidates']);
@@ -331,10 +335,7 @@ class Candidates extends CI_Controller
 					//$this->candidate_model->update($can, $this->candidate_model->get_fields());
 				}
 			}
-
-
-
-			
+	
 			//$candidate->can_votes = $row_count;
 		}		
 	}
