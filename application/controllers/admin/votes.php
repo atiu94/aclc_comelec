@@ -54,7 +54,8 @@ class Votes extends CI_Controller
 		if($this->input->post('submit'))
 		{
 			$can_ids = $this->input->post('can_ids');
-
+			$can_ids_count = count($can_ids);
+			//var_dump($can_ids_count); die();
 		
 			if($can_ids !== false)
 			{
@@ -62,9 +63,10 @@ class Votes extends CI_Controller
 				//HARDCODED VOTE LIMIT
 				//CHECK views/admin/votes/create line 62 for the javascript part
 
-				$limit = 7;
-				if($can_ids == $limit)
+				$limit = 2;
+				if($can_ids_count = $limit)
 				{
+					
 					foreach($can_ids as $can_id)
 					{
 						$can_id_int = intval($can_id);
@@ -77,7 +79,7 @@ class Votes extends CI_Controller
 					}
 
 					$this->template->notification('Thank you for voting! Your vote is valid and has been casted.', 'success');
-					$this->template->autofill($vote);
+					//$this->template->autofill($vote);
 				}
 				else 
 				{
