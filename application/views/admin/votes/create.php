@@ -59,8 +59,7 @@ else
 
 <script type="text/javascript">
 //HARDCODED VOTE LIMIT
-
-var limit = 2;
+var limit = 7;
 $('input[type=checkbox]').on('change', function (e) {
     if ($('input[type=checkbox]:checked').length > limit) {
         $(this).prop('checked', false);

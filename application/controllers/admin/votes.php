@@ -58,25 +58,37 @@ class Votes extends CI_Controller
 		
 			if($can_ids !== false)
 			{
-				foreach($can_ids as $can_id)
+
+				//HARDCODED VOTE LIMIT
+				//CHECK views/admin/votes/create line 62 for the javascript part
+
+				$limit = 7;
+				if($can_ids == $limit)
 				{
-					$can_id_int = intval($can_id);
+					foreach($can_ids as $can_id)
+					{
+						$can_id_int = intval($can_id);
 
-					$vote = array();
+						$vote = array();
 
-					$vote['vot_can'] = $can_id_int;
+						$vote['vot_can'] = $can_id_int;
 
-					$this->vote_model->create($vote, $this->vote_model->get_fields());
+						$this->vote_model->create($vote, $this->vote_model->get_fields());
+					}
+
+					$this->template->notification('Thank you for voting! Your vote is valid and has been casted.', 'success');
+					$this->template->autofill($vote);
 				}
-
-				$this->template->notification('Thank you for voting! Your vote is valid and has been casted.', 'success');
-			}		
+				else 
+				{
+					$this->template->notification('Your votes are invalid. Please vote for '.$limit." candidates.", 'danger');
+				}	
+					
 				
-			
-
-			$this->template->autofill($vote);
+				
+			}
 		}
-
+ 
 		$page = array();
 		$page['candidates'] = $this->candidate_model->pagination("admin/candidates/index/__PAGE__", 'get_all_alphabetical_called');
 		$page['candidates_pagination'] = $this->candidate_model->pagination_links();
