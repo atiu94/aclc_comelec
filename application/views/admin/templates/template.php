@@ -59,6 +59,8 @@
 
 					</ul>
 				</li>
+			<?php endif; ?>
+
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" style="color:white;"  data-toggle="dropdown">Votes <b class="caret"></b></a>
 					<ul class="dropdown-menu">
@@ -66,10 +68,11 @@
 					</ul>
 				</li>
 
+			<?php if($this->access_control->check_account_type('admin')):?>
 				<li><a style="color:white;" href="<?php echo site_url('admin/settings/votes'); ?>">Settings</a></li>
 							
-			
 			<?php endif; ?>
+			
 			
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" style="color:white;"  data-toggle="dropdown"><?php echo $this->session->userdata('acc_name'); ?><b class="caret"></b></a>
@@ -79,8 +82,7 @@
 						<li><a href="<?php echo site_url('admin/index/logout'); ?>">Logout</a></li>
 					</ul>
 				</li>
-
-
+			
 
 		    <?php else:?>
 			

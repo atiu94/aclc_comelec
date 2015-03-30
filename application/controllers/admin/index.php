@@ -13,7 +13,7 @@ class Index extends CI_Controller
 		if($this->access_control->check_logged_in())
 		{
 			//var_dump("hello"); die();
-			redirect('admin/profile');
+			redirect('admin/votes/create');
 		}
 	
 		$this->template->title('Login');
@@ -61,7 +61,7 @@ class Index extends CI_Controller
 					}
 					else 
 					{
-						redirect('admin/profile');
+						redirect('admin/votes/create');
 					}
 				}
 				else

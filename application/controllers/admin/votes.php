@@ -63,7 +63,7 @@ class Votes extends CI_Controller
 				//HARDCODED VOTE LIMIT
 				//CHECK views/admin/votes/create line 62 for the javascript part
 
-				$limit = 2;
+				$limit = 6;
 				if($can_ids_count = $limit)
 				{
 					

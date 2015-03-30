@@ -60,7 +60,7 @@ else
 <script type="text/javascript">
 //HARDCODED VOTE LIMIT
 //CHECK controller/admin/votes/create line 64 for the controller part
-var limit = 2;
+var limit = 6;
 $('input[type=checkbox]').on('change', function (e) {
     if ($('input[type=checkbox]:checked').length > limit) {
         $(this).prop('checked', false);

@@ -62,7 +62,7 @@ class Candidates extends CI_Controller
 		$page['candidates'] = $this->candidate_model->pagination("admin/candidates/index/__PAGE__", 'get_all_alphabetical_called');
 		$page['candidates_pagination'] = $this->candidate_model->pagination_links();
 		$page['candidate_count'] = $this->candidate_model->pagination("admin/candidates/index/__PAGE__", 'get_all_alphabetical_called')->num_rows();
-		$page['vote_count'] = $this->vote_model->pagination("admin/candidates/index/__PAGE__", 'get_all')->num_rows();
+		$page['vote_count'] = $this->vote_model->get_all()->num_rows();
 
 		$this->template->title('Voting Results');
 		$this->set_votes($page['candidates']);
