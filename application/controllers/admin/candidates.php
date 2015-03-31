@@ -63,9 +63,12 @@ class Candidates extends CI_Controller
 		$page['candidates_pagination'] = $this->candidate_model->pagination_links();
 		$page['candidate_count'] = $this->candidate_model->pagination("admin/candidates/index/__PAGE__", 'get_all_alphabetical_called')->num_rows();
 		$page['vote_count'] = $this->vote_model->get_all()->num_rows;
+		$page['voters_popn']= intval($this->settings_model->get_one(1)->set_count);
+
+
 		$vote_count = $page['vote_count'];
 		//hardcoded
-		$limit = 1;
+		$limit = 2;
 		$page['voters_count'] = $vote_count/$limit;
 
 
@@ -301,7 +304,7 @@ class Candidates extends CI_Controller
 		}
 
 		$this->template->notification('Votes were reset to zero.', 'danger');
-		redirect('admin/candidates');
+		redirect('admin/candidates/results');
 	}
 
 

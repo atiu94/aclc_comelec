@@ -19,7 +19,9 @@
 ![System Screenshot](/fig/voting_results.png)  
 5. Reset Votes for Next Round. 
 ![System Screenshot](/fig/reset_votes.png)  
-6. Reset Vote Limit in `views/admin/votes/create.php` line 60
+6. Reset Vote Limit in  
+
+`views/admin/votes/create.php` line 60
 
 ```javascript
 var limit = 2; //reset vote limit here
@@ -29,6 +31,41 @@ $('input[type=checkbox]').on('change', function (e) {
         alert("You are only allowed to vote for "+limit+" candidates.");
     }
 });
+```
+
+`controller/admin/votes.php` line 50  
+
+```php
+	public function create()
+	{
+		$this->template->title('Cast Vote');
+
+		if($this->input->post('submit'))
+		{
+			$can_ids = $this->input->post('can_ids');
+			$can_ids_count = count($can_ids);
+
+			if($can_ids !== false)
+			{
+				$limit = 2; //set limit here
+				if($can_ids_count >= $limit)
+				{
+					
+					foreach($can_ids as $can_id)
+					{
+```
+
+`controller/admin/candidates.php` line 58 
+
+```php
+	public function results()
+	{
+	...
+		$vote_count = $page['vote_count'];
+		//hardcoded
+		$limit = 2; //set limit here
+		$page['voters_count'] = $vote_count/$limit;
+
 ```
 
 
