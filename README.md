@@ -67,11 +67,14 @@ public function results()
 	$page['voters_count'] = $vote_count/$limit;
 
 ```  
-### Recommendations for the future versions:
-1. Vote Limit must be an attribute of the `settings` model. This is to avoid hardcoding.  
-2. Archiving and comparison for past round of votes. This is to see trends easily in one page, and to avoid taking screenshots of voting results page per round. 
-3. Improve access privileges function for `admin` and `user` (voter) in the controllers. 
-4. Create `ballot` model (or table), which has many `votes`. 
+## Recommendations for future versions:
+1. **Vote Limit** must be an attribute of the `settings` model. This is to avoid hardcoding.  
+
+2. **Archiving and comparison of past rounds of votes**. This is to see trends easily in one page, and to avoid taking screenshots of voting results page per round.  
+
+3. Improve **access privileges** function for `admin` and `user` (voter) in the controllers. Make sure that voters cannot access the voting results by all means.  
+
+4. Create `ballot` model (or table) that has the list of chosen candidates of a voter. One submitted form is a ballot. Database speak, one ballot has many votes. 
 
 
 
