@@ -24,7 +24,7 @@
 `views/admin/votes/create.php` line 60
 
 ```javascript
-var limit = 2; //reset vote limit here
+var limit = 2; //set vote limit here
 $('input[type=checkbox]').on('change', function (e) {
     if ($('input[type=checkbox]:checked').length > limit) {
         $(this).prop('checked', false);
@@ -36,35 +36,35 @@ $('input[type=checkbox]').on('change', function (e) {
 `controller/admin/votes.php` line 50  
 
 ```php
-	public function create()
+public function create()
+{
+	$this->template->title('Cast Vote');
+
+	if($this->input->post('submit'))
 	{
-		$this->template->title('Cast Vote');
+		$can_ids = $this->input->post('can_ids');
+		$can_ids_count = count($can_ids);
 
-		if($this->input->post('submit'))
+		if($can_ids !== false)
 		{
-			$can_ids = $this->input->post('can_ids');
-			$can_ids_count = count($can_ids);
-
-			if($can_ids !== false)
+			$limit = 2; //set limit here
+			if($can_ids_count >= $limit)
 			{
-				$limit = 2; //set limit here
-				if($can_ids_count >= $limit)
+				
+				foreach($can_ids as $can_id)
 				{
-					
-					foreach($can_ids as $can_id)
-					{
 ```
 
 `controller/admin/candidates.php` line 58 
 
 ```php
-	public function results()
-	{
-	...
-		$vote_count = $page['vote_count'];
-		//hardcoded
-		$limit = 2; //set limit here
-		$page['voters_count'] = $vote_count/$limit;
+public function results()
+{
+...
+	$vote_count = $page['vote_count'];
+	//hardcoded
+	$limit = 2; //set limit here
+	$page['voters_count'] = $vote_count/$limit;
 
 ```
 

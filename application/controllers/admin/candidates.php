@@ -68,7 +68,7 @@ class Candidates extends CI_Controller
 
 		$vote_count = $page['vote_count'];
 		//hardcoded
-		$limit = 2;
+		$limit = 2; //set limit here
 		$page['voters_count'] = $vote_count/$limit;
 
 
