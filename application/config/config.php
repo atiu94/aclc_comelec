@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://192.168.0.108/aclc_comelec/';
+$config['base_url']	= 'http://localhost/aclc_comelec/';
 
 /*
 |--------------------------------------------------------------------------
